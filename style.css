@@ -1,0 +1,156 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+  background: url(Lights.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+}
+
+p {
+	font-family: 'helvetica neue','Open Sans', sans-serif;
+	font-weight: 300;
+	line-height: 1.5rem;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.97);
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: right;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: .8rem 1rem;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #111;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+.topnav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+}
+
+/* Header Styles */
+
+.top-header {
+	margin-bottom: 2rem;
+}
+.page-title, .sub-title {
+	display: block;
+	text-align: center;
+	margin: auto;
+	color: white;
+	font-weight: 400;
+}
+
+.page-title {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 7rem;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+}
+
+.sub-title {
+	font-family: 'PT Sans', sans-serif;
+	font-kerning: 1rem;
+}
+.content {
+	background-color: rgba(0,0,0,0.85);
+	padding-top: 1rem;
+	padding-bottom: 100px;
+	width: 80%;
+	margin: auto;
+}
+
+.section {
+	width: 80%;
+	color: white;
+	max-width: 700px;
+	margin: 2rem auto;
+	/*padding: 50px;
+	padding-top: 20px;*/
+	box-sizing: border-box;
+}
+
+#tyler-pic {
+	width: 200px;
+	height: auto;
+	float: left;
+	margin-right: 20px;
+}
+
+#experience {
+	padding-bottom: 100px;
+}
+
+.experience-section {
+	clear: both;
+}
+.date {
+	float: left;
+}
+
+.description {
+	float: right;
+}
+
+.project-title {
+	margin-bottom: -1rem;
+}
+
+.publication-image {
+	float: left;
+	height: 150px;
+	width: 150px;
+	background-color: blue;
+}
+
+.publication-section {
+	clear: both;
+	margin-bottom: 1rem;
+}
+
+/* FOR MOBILE*/
+@media (max-width: 600px) {
+	ul.topnav li a {
+		font-size: .7rem;
+		padding: .6rem .7rem;
+	}
+	.page-title {
+	font-size: 4rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+}
+
+
+
+
