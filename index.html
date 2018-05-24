@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>Tyler Hughes</title>
-<style>html{overflow-y:scroll}body{background-color:#d3d3d3;font-family:Verdana,Geneva,sans-serif;font-weight:400;color:#000}h1,h2,h3,h4,h5,h6{}p{font-size:11pt;line-height:1.5em}#container{width:1000px;margin:0 auto 0 auto;background-color:#fff}#header{padding:13px 20px 10px 20px}#header .name{display:inline-table}#header .title{display:inline-table}#header h1{font-family:Arial-Black,Gadget,sans-serif;font-size:30pt;font-weight:bold;margin:5px 0 5px 0}#header p{font-family:Arial-Black,Gadget,sans-serif;font-size:16pt;margin:5px 0 5px 0}#header a{text-decoration:none;color:#000}#header a:hover{color:#000}div#page_body{width:1000px}div#index_page_contents,div#index_picture_frame,div#left_menu,div#page_contents,div#contact_page_contents,div#contact_picture_frame{padding:10px 10px 10px 10px;min-height:100px;float:left}div#page_contents{width:920px;padding:10px 40px 10px 40px;background-color:#fff}div#index_page_contents{width:550px;padding:10px 10px 10px 40px;background-color:#fff}div#index_picture_frame{width:380px;background-color:#fff}div#contact_page_contents{width:450px;padding:10px 10px 10px 40px;background-color:#fff}div#contact_picture_frame{width:480px;background-color:#fff}div#top_menu{background-color:#333;width:1000px;display:inline-table;padding:0 0 0 0}div#top_menu ul{list-style-type:none;padding:0 0 0 0;margin:0 0 0 0}div#top_menu li{text-align:center;padding:7px 0 7px 0;width:20%;display:inline;float:left}div#top_menu li:hover{background-color:#999}div#top_menu li.active{background-color:#999}div#top_menu a{background-color:#0f0;text-decoration:none;color:#fff}div#footer{font-size:15pt;clear:both;padding:10px 10px 10px 10px;background-color:#eee}div#footer .copyright{font-size:9pt;text-align:right;margin:0 0 0 0}img.noborder{border:0;margin:0;padding:0}a.icon{text-decoration:none}a{text-decoration:none}p.tab{margin-left:30px}p.tabtab{margin-left:60px}div#index_page_contents li{font-size:11pt;line-height:1.5em}</style>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tyler W. Hughes</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico"/>
 
+<!-- Tracking code -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -16,64 +21,573 @@
   ga('send', 'pageview');
 
 </script>
-
 </head>
 
-<body>
-  <div id="container">
+<body onload="start()">
 
-    <div id="header">
-      <span class="name">
-  <h1><a href="index.html">Tyler William Hughes</a></h1>
-  <p class="title"> PhD Student, Stanford University</p>
-      </span>
-    </div>
-    <div id="top_menu">
-      <ul>
-        <a href="index.html"><li>Home</li></a>                
-        <a href="research.html"><li>Research</li></a>
-        <a href="courses.html"><li>Courses</li></a>        
-        <a href="projects.html"><li>Projects</li></a>
-        <a href="other.html"><li>Other</li></a>
-      </ul>
-    </div>
-
-    <div id="page_body">
-      <div id="index_page_contents">
-  <h4>About</h4>
-  <p>
-    <p>
-    As of summer of '17 I am starting my 4th year in the <a href="https://web.stanford.edu/dept/app-physics/cgi-bin/">Stanford Applied Physics</a> PhD program working under Professor <a href="https://web.stanford.edu/group/fan/">Shanhui Fan</a>.   Broadly, I do research in computational and theoretical photonics.  I am part of the <a href="https://achip.stanford.edu/"> Accelerator on a Chip International Program </a>, which has the goal of building miniature particle accelerators on a chip using advanced laser and nanofabrication technology (<a href="https://www.youtube.com/watch?v=V89qvy8whxY&feature=youtu.be">video explanation</a>).  My main research interest is in computational design with applications to photonic devices: I am developing numerical and theoretical tools to solve scientifically interesting optimization problems.  In addition, I am thinking about efficient methods for supplying the optical power needed to drive these accelerators.  Please see my ‘research’ tab for more details.
-    </p>    
-    <p>
-    I am extremely interested in AI and machine learning, most notably the effects that these technologies will inevtiably have (and are having!) in society.  I am currently applying the technical aspects of these fields to my research in photonics, by (1) coming up with powerful algorithms for designing optical devices and (2) thinking about light-based computational hardware platforms for performing certain operations faster and with better energy efficiency.
-    </p>
-    <p>
-    I grew up in San Diego and went to the University of Michigan for my undergraduate degree.  While I was initially a Philosophy major, I defected halfway into my undergrad and graduated with a BS in physics.  In addition to physics I spent a good amount of focus in studying <a href="https://lsa.umich.edu/cscs">complex systems</a>.  Of particular interest was social network theory, nonlinear dynamics, and emergent phenomena.  At Michigan, I did research with <a href="http://www.umich.edu/~ocm/">Prof. Stephen Forrest</a> on making economical thin-film solar cells, which gave me a lot of experience working with dangerous chemicals in the cleanroom.  After that, I spent some time traveling in Asia and ended up in Singapore working on trapped ion platforms for quantum computation. Later, I worked as a junior software developer at a startup <a href="https://www.gudtech.com/">GudTech Inc.</a> before starting my PhD.
-    </p>
-   <p>
-    When I’m not doing science, you can find me surfing, rock climbing, or experimenting with various fermentation projects. See my personal projects page for more details.
-    </p>    
-    <ul>
-    <a href="hughes_resume.pdf"><li>Resume</li></a>
-    <a href="https://github.com/twhughes"><li>GitHub</li></a>
-    <a href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en"><li>Google Scholar</li></a>    
-    </p>
-  <p>
-    
-  </p>
-      </div>
-      <div id="index_picture_frame">
-        <img src="images/tyler2.png" alt="Picture of me" style="width:300px;height:404px;">
+<div id="header" class="bg1">
+<!--   <div id="headerblob"> -->
+    <img src="images/tyler.png" class="img-circle imgme" height=150px>
+    <div id="headertext">
+      <div id="htname">Tyler W. Hughes</div>
+      <div id="htdesc">Stanford Applied Physics Ph.D. student</div>
+      <div id="htem">twhughes _at_ stanford.edu</div>     
+      <div id="icons">
+        <div class="svgico">
+          <a href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en"><img src="icons/gscholar.png" width="40px"></a>
+        </div> 
+        <div class="svgico">
+          <a href="https://github.com/twhughes"><img src="icons/github.png" width="40px"></a>
+        </div>
+        <div class="svgico">
+          <a href="https://www.linkedin.com/in/tylerwhughes/"><img src="icons/Linkedin.png" width="40px"></a>
+        </div>      
       </div>
     </div>
+  <!-- </div> -->
+</div>
+
+<!------------------------------ BIO ------------------------------>
+
+
+<div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+ 
+ <h2>Bio</h2>
+ <p>
+ As of May of 2018 I am in my 4th year of the <a href="https://web.stanford.edu/dept/app-physics/cgi-bin/">Stanford Applied Physics</a> PhD program working under Professor <a href="https://web.stanford.edu/group/fan/">Shanhui Fan</a>.   Broadly, I do research in computational and theoretical photonics.  I am part of the <a href="https://achip.stanford.edu/"> Accelerator on a Chip International Program </a>, which has the goal of building miniature particle accelerators on a chip using advanced laser and nanofabrication technology (<a href="https://www.youtube.com/watch?v=V89qvy8whxY&feature=youtu.be">video explanation</a>).  My main research interest is in computational design with applications to photonic devices: I am developing numerical and theoretical tools to solve scientifically interesting optimization problems.  In addition, I am thinking about efficient methods for supplying the optical power needed to drive these accelerators.  Please see my <a href="#pubes">‘publications’</a> tab for more details.
+
+  <br><br>
+  I am extremely interested in AI and machine learning, most notably the effects that these technologies will inevtiably have (and are having!) in society.  I am currently applying the technical aspects of these fields to my research in photonics, by (1) coming up with powerful algorithms for designing optical devices and (2) thinking about light-based computational hardware platforms for performing certain operations faster and with better energy efficiency.
+
+  <br><br>
+  I grew up in San Diego and went to the University of Michigan for my undergraduate degree.  While I was initially a Philosophy major, I defected halfway into my undergrad and graduated with a BS in physics.  In addition to physics I spent a good amount of focus in studying <a href="https://lsa.umich.edu/cscs">complex systems</a>.  Of particular interest was social network theory, nonlinear dynamics, and emergent phenomena.  At Michigan, I did research with <a href="http://www.umich.edu/~ocm/">Prof. Stephen Forrest</a> on making economical thin-film solar cells, which gave me a lot of experience working with dangerous chemicals in the cleanroom.  After that, I spent some time traveling in Asia and ended up in Singapore working on trapped ion platforms for quantum computation. Later, I worked as a junior software developer at a startup <a href="https://www.gudtech.com/">GudTech Inc.</a> before starting my PhD.
+
+  <br><br>
+  When I’m not doing science, you can find me surfing, rock climbing, or experimenting with various fermentation projects. See my personal projects page for more details.
+</p>
+
+<!------------------------------ TIMELINE ------------------------------>
+
+  </div>
+  <hr class="soft">
+  <div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
   
-    <div id="footer">
-      <p class="copyright">
-  &#169 Tyler Hughes, 2017
-      </p>
+  <h2>Timeline</h2>
+
+  <ul>
+    <li>
+      <span class="t2when">Summer 2018</span><br>
+  <span class="t2who">Machine Learning Engineer Intern at <a href="https://rasa.com/">Rasa</a></span><br>
+  <span class="t2what">Natural language understanding (tbd).</span>
+    </li>
+    <li>
+      <span class="t2when">2014-present</span> <br>
+      <span class="t2who">Applied Physics PhD Student at Stanford University</span> <br>
+      <span class="t2what">Laser-driven accelerators on a chip. Photonic-based machine learning hardware. Advisor: <a href="http://web.stanford.edu/group/fan/">Shanhui Fan</a> </span>
+    </li>
+    <li>
+      <span class="t2when">2014</span><br>
+      <span class="t2who">Junior Software Engineer at <a href="https://gudtech.com/">Gudtech Inc.</a></span><br>
+      <span class="t2what">Full stack development of inventory management software.</a></span>
+    </li>
+    <li>
+      <span class="t2when">2013</span><br>
+      <span class="t2who">Research Assistant at National University of Singapore - <a href="https://www.quantumlah.org/">Centre for Quantum Technologies</a></span> <br>
+      <span class="t2what">Surface ion trapping for quantum information processing.  Advisor: <a href="http://coldiongroup.wixsite.com/index">Manas Mukherjee</a></span>
+    </li>
+    <li>
+      <span class="t2when">2010-2013</span><br>
+      <span class="t2who">Undegraduate Research Assistant at University of Michigan - <a href="http://umich.edu/~ocm/index.html">Optoelectronic Components and Materials</a> </span> <br>
+      <span class="t2what">Wafer reuse for low cost, thin film III-V photovoltaic devices. Advisor: <a href="http://umich.edu/~ocm/People%20pages/stevefor.html">Stephen Forrest</a></span>
+    </li>
+    <li>
+      <span class="t2when">2009-2013</span><br>
+      <span class="t2who">BS student at University of Michigan at Ann Arbor</span><br>
+      <span class="t2what">Major: Physics</span>
+    </li>
+  </ul>
+
+
+  <!-- <span class="t2when">Summer 2018:</span>
+  <span class="t2who">Machine Learning Engineer Intern at <a href="https://rasa.com/">Rasa</a></span><br>
+  <span class="t2what">- Natural language understanding (tbd).</span>
+
+  <br>
+  <span class="t2when">2014-present:</span> <br>
+      <span class="t2who">Applied Physics PhD Student at Stanford University</span> <br>
+      <span class="t2what">- Laser-driven accelerators on a chip. Photonic-based machine learning hardware. Advisor: <a href="http://web.stanford.edu/group/fan/">Shanhui Fan</a> </span>
+
+  <br>
+  <span class="t2when">2014:</span>
+  <span class="t2who">Junior Software Engineer at <a href="https://gudtech.com/">Gudtech Inc.</a></span><br>
+  <span class="t2what">- Full stack development of inventory management software.</a></span>
+
+  <br>
+  <span class="t2when">2013:</span>
+  <span class="t2who">Research Assistant at National University of Singapore - <a href="https://www.quantumlah.org/">Centre for Quantum Technologies</a></span> <br>
+  <span class="t2what">- Surface ion trapping for quantum information processing.  Advisor: <a href="http://coldiongroup.wixsite.com/index">Manas Mukherjee</a></span>
+
+  <br>
+  <span class="t2when">2010-2013:</span>
+  <span class="t2who">Undegraduate Research Assistant at University of Michigan - <a href="http://umich.edu/~ocm/index.html">Optoelectronic Components and Materials</a> </span> <br>
+  <span class="t2what">- Wafer reuse for low cost, thin film III-V photovoltaic devices. Advisor: <a href="http://umich.edu/~ocm/People%20pages/stevefor.html">Stephen Forrest</a></span>
+
+  <br>
+  <span class="t2when">2009-2013:</span>
+  <span class="t2who">BS student at University of Michigan at Ann Arbor</span><br>
+  <span class="t2what">- Major: Physics</span> -->
+
+</div>
+
+<hr class="soft">
+
+<!------------------------------ PUBLICATIONS ------------------------------>
+
+<div class="container" id="pubes">
+  <h2>Selected Publications</h2>
+  <div id="pubs">
+	 
+    <div class="pubwrap">
+      <div class="pubd" style="display:inline-block">[coming soon] Training of Photonic Neural Networks through In-Situ Backpropagation.</div>
+      <div class="puba" style="display:inline-block"><b>Tyler W. Hughes</b>, Momchil Minkov, Yu Shi, and Shanhui Fan.</div>
+      <div class="pubv" style="display:inline-block">Under Review</div>
+			<br><br>
     </div>
-  </div>     
+
+    <div class="pubwrap">
+      <div class="pubd" style="display:inline-block">[coming soon] Inverse Design of Nonlinear Optical Devices.</div>
+      <div class="puba" style="display:inline-block"><b>Tyler W. Hughes</b> and Shanhui Fan.</div>
+      <div class="pubv" style="display:inline-block">Manuscript In Preparation</div>
+			<br><br>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/OnChip.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">On-Chip Laser Power Delivery System for Dielectric Laser Accelerators</div>
+            <div class="pubd">We propose an integrated system for power laser-driven particle accelerators on a chip.  This is a promising way to scale this technology to larger lengths and higher energy gains, enabling practical applications.</div>
+            <div class="puba"><b>Tyler W. Hughes</b>, Si Tan, Zhexin Zhao, Neil V. Sapra, YunJo Lee, Kenneth J. Leedle, Huiyang Deng, Yu Miao, Dylan S. Black, Olav Solgaard, James S. Harris, Minghao Qi, Jelena Vuckovic, R. Joel England, Robert L. Byer, and Shanhui Fan</div>
+            <div class="pubv">Physical Review Applied (2018)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.9.054017" target=blank>Paper</a></li>
+                <li><a href="https://arxiv.org/pdf/1709.04441.pdf"target=blank>arXiv</a></li>
+                <li><a href="https://github.com/twhughes/DLA-Laser-Coupling-Simulation-Software"target=blank>Code (Github)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/DLAAdjoint.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Method for Computationally Efficient Design of Dielectric Laser Accelerator Structures.</div>
+            <div class="pubd">We show how the adjoint method may be used to design dielectric laser accelerator structures.  Here the goal is to create a standing wave pattern that maximizes the energy gain achieved by a charged particle moving through the structure.  We show that the adjoint field is equivalent to that radiated by the electron beam of interest.</div>        
+            <div class="puba"><b>Tyler W. Hughes</b>, Georgios Veronis, Kent Wootton, R. Joel England, and Shanhui Fan</div>
+            <div class="pubv">Optics Express (2017)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-13-15414"target=blank>Paper (open access)</a></li>
+                <li><a href="https://github.com/twhughes/DLA-Structure-Optimization" target=blank>Code (Github)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/Plasmonic.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Plasmonic Circuit Theory for Multiresonant Light Funneling to a Single Spatial Location</div>
+            <div class="pubd">Using an equivalent circuit model, we show how one may systematically design metallic nanostructures to focus light at the same position for multiple, independently tunable frequencies.  We present a multi-layered plasmonic structure that accomplishes high field enhancement for four frequencies using light funneling between metal-insulator-metal gap modes.</div>
+            <div class="puba"><b>Tyler W. Hughes</b> and Shanhui Fan</div>
+            <div class="pubv">Nano Letters (2016)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.6b02474" target=blank>Paper</a></li>
+                <li><a href="https://web.stanford.edu/group/fan/publication/Hughes_NanoLetters_16_5764_2016.pdf" target=blank>PDF</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/SolarCell.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Non-Descructive Wafer Recycling for Low-Cost Thin-Film Flexible Optoelectronics</div>
+            <div class="pubd"></div>
+            <div class="puba">Kyusang Lee, Jeramy D. Zimmerman, <b>Tyler W. Hughes</b>, and Stephen R. Forrest </div>
+            <div class="pubv">Advanced Functional Materials (2014)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/adfm.201400453" target=blank>Paper</a></li>                <li><a href="https://deepblue.lib.umich.edu/bitstream/handle/2027.42/108039/adfm201400453.pdf?sequence=1&isAllowed=y" target=blank>PDF</a></li>                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="showmore" id="showmorepubs">
+    show more
+    </div>
+
+    <div id="morepubs">
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/ActiveAdjoint.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Adjoint-Based Optimization of Active Nanophotonic Devices</div>
+            <div class="pubd">We show how the adjoint method may be used to inverse design periodically modulated optical devices.  Our approach is based upon the multi-frequency finite-difference frequency-domain method (<a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-3-11-1256" target=blank>link</a>).  As a demonstration, we numerically design and optimize a compact optical isolator.</div>
+            <div class="puba">Jiahui Wang, Yu Shi, <b>Tyler W. Hughes</b>, Zhexin Zhao, and Shanhui Fan</div>
+            <div class="pubv">Optics Express (2018)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-26-3-3236" target=blank>Paper (open access)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/Wootton.png" height=280px>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Towards a Fully Integrated Accelerator on a Chip: Dielectric Laser Acceleration (DLA) From the Source to Relativistic Electrons</div>
+            <div class="pubd">We discuss steps towards building a fully functional laser-driven particle accelerator on a chip, including a systematic overview of all necessary components and recent advances.</div>
+            <div class="puba">Kent Wootton, ... , <b>Tyler W. Hughes</b>, et al.</div>
+            <div class="pubv">International Particle Accelerator Conference (2017)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://portal.slac.stanford.edu/sites/ard_public/aard/dla/DLAE163%20Publications/IPAC17_wootton.pdf" target=blank>PDF</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/FlappingWing.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Flexible Antenna Integrated With an Epitaxial Lift-Off
+Solar Cell Array for Flapping-Wing Robots</div>
+            <div class="pubd">To demonstrate the applications of lightweight, thin film optoelectronic devices, we integrate a flying robot with thin-film, III-V photovoltaics, which are used for both power and wireless communication.</div>
+            <div class="puba">Jungsuek Oh, Kyusang Lee, <b>Tyler W. Hughes</b>, Stephen Forrest, and Kamal Sarabandi</div>
+            <div class="pubv">IEEE Transactions on Antennas and Propagation (2014)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://ieeexplore.ieee.org/abstract/document/6813605/?reload=true" target=blank>Paper</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="soft">
+
+<!------------------------------ PROJECTS ------------------------------>
+
+<div class="container">
+  <h2>Side Projects</h2>
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="pp">
+        <a href="https://github.com/twhughes/Symbolic-Regression" target=blank>
+          <img src="images/LSTM_tree.png" class="imgb">
+        </a>
+        <div class="ppt">Symbolic Regression</div>
+        <div class="ppd">
+        An approach to predicting the equation underlying a set of data points using deep learning.  Our method uses a CNN to encode the dataset into a feature vector.  Then we use an LSTM network to decode a binary tree representing the predicted equation.
+        </div>
+		<div class="publ">
+              <ul>
+                <li><a href="pdfs/cs221_final.pdf" target=blank>Paper</a></li>
+				<li><a href="https://github.com/twhughes/Symbolic-Regression" target=blank>Code (Github)</a></li>                
+              </ul>
+            </div>        
+      </div>
+    </div>
+
+
+       <div class="col-md-4">
+      <div class="pp">
+        <a href="https://pdfs.semanticscholar.org/c056/82e5aa5a20c6ecb463119bd73a55ccfc8197.pdf" target=blank>
+        <img src="images/reinforcement_learning.png" class="imgb">
+        </a>
+        <div class="ppt">Reinforcement Learning for Photonics</div>
+        <div class="ppd">
+        Used a Markov Decision Process to optimize and design multi-layered photonic devices for tailored reflection response.  Modeled optimization procedure as a reinforcement learning problem. Final project for Stanford CS229 (Machine Learning).
+        </div>
+		<div class="publ">
+      <ul>
+		<li><a href="https://pdfs.semanticscholar.org/c056/82e5aa5a20c6ecb463119bd73a55ccfc8197.pdf" target=blank>Writeup</a></li>                
+      </ul>    
+      </div>            
+      </div>      
+    </div>
+
+
+      <div class="col-md-4">
+        <div class="pp">
+          <a href="https://github.com/twhughes/Faraday-FDFD" target=blank>
+            <img src="images/FDFD.png" class="imgb">
+          </a>
+          <div class="ppt">Photonics Simulation Software</div>
+          <div class="ppd">
+				I've written several pieces of numerical software for photonics, including the finite-difference frequency-domain (FDFD) and time-domain (FDTD) methods in a variety of programming languages.
+          </div>
+		<div class="publ">
+      <ul>
+      	<li><a href="https://github.com/twhughes/FDFD_matlab" target=blank>FDFD (MATLAB)</a></li>
+      	<li><a href="https://github.com/twhughes/Finite-Difference-Frequency-Domain" target=blank>
+      	FDFD (python)</a></li>
+      	<li><a href="https://github.com/twhughes/Faraday-FDFD" target=blank>FDFD (Julia)</a></li>
+      	<li><a href="https://github.com/twhughes/FDTD_JS" target=blank>FDTD (js)</a></li>
+      	<li><a href="https://github.com/twhughes/FDTDPy" target=blank>FDTD (python)</a></li>
+      	<li><a href="https://github.com/twhughes/FDTD_MATLAB" target=blank>FDTD (MATLAB)</a></li>      	
+      </ul>    
+     </div>         
+    </div>
+  </div>
+
+</div>
+  <div class="showmore" id="showmoreprojects">
+    show more
+  </div>
+  <div id="moreprojects">
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="pp">
+        <a href="https://github.com/twhughes/Trajectory-Prediction" target=blank>
+        <img src="images/trajectory_tracking.png" class="imgsm">
+        </a>
+        <div class="ppt">Trajectory Tracking</div>
+        <div class="ppd">
+        Trained LSTM to predict trajectories of pedestrians in a busy space.  Incorporated labeled scene images and information about other pedestrians.  Final project for Stanford CS230 (Deep Learning).
+        </div>
+		<div class="publ">
+      <ul>
+		<li><a href="https://github.com/twhughes/Trajectory-Prediction" target=blank>Code (Github)</a></li>                
+      </ul>    
+      </div>            
+      </div>      
+    </div>
+
+
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="dla.html" target=blank>
+            <img src="images/DLA.png" class="imgsm">
+          </a>
+          <div class="ppt">Diffusion Limited Aggregation</div>
+          <div class="ppd">
+            Here is a javascript implementation of <a href="https://en.wikipedia.org/wiki/Diffusion-limited_aggregation" target=blank>diffusion limited aggregation</a> I wrote that runs in the browser.
+          </div>
+<div class="publ">
+      <ul>
+		<li><a href="dla.html">Run</a></li>  
+		<li><a href="https://github.com/twhughes/DLA " target=blank>Code (Github)</a></li>          
+      </ul>    
+      </div>          
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="https://github.com/twhughes/Kombucha-Analytics" target=blank>
+            <img src="images/kombucha.png" class="imgsm">
+          </a>
+          <div class="ppt">Kombucha Analytics</div>
+          <div class="ppd">
+            A few years ago, a friend and I started working on a django app that allows people to keep track of their kombucha recipes.  Eventually, we would like to include the ability for users to share and perform data analytics on the recipes.
+          </div>
+<div class="publ">
+      <ul>
+		<li><a href="https://github.com/twhughes/Kombucha-Analytics" target=blank>Code (Github)</a></li>          
+      </ul>
+      </div>          
+        </div>
+      </div>
+</div>
+<!---
+      <div class="col-md-3">
+      <div class="pp">
+        <a href="http://bit.ly/scholaroctopus">
+          <img src="img/scholaroctopus.jpg" class="imgsm">
+        </a>
+        <div class="ppt">ScholarOctopus</div>
+        <div class="ppd">
+          ScholarOctopus takes ~7000 papers from 34 ML/CV conferences (CVPR / NIPS / ICML / ICCV / ECCV / ICLR / BMVC) between 2006 and 2014 and visualizes them with t-SNE based on bigram tfidf vectors. In general, it should be much easier than it currently is to explore the academic literature, find related papers, etc. This hack is a small step in that direction at least for my bubble of related research.
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="http://cs.stanford.edu/people/karpathy/evenmore.html">
+            <img src="img/circle.svg" class="imgsm">
+          </a>
+          <div class="ppt">even more</div>
+          <div class="ppd">
+            Even more various crappy projects I've worked on long time ago.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="http://cs.stanford.edu/~karpathy/tsnejs/">
+            <img src="img/tsnejslogo.jpg" class="imgsm">
+          </a>
+          <div class="ppt">tsnejs</div>
+          <div class="ppd">
+          tsnejs is a t-SNE visualization algorithm implementation in Javascript. I also computed an embedding for ImageNet validation images <a href="http://cs.stanford.edu/people/karpathy/cnnembed/">here</a>. Pretty! You can also use tsnejs to embed (almost) arbitrary CSV data in this <a href="http://cs.stanford.edu/people/karpathy/tsnejs/csvdemo.html">web interface</a>.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="http://badmephisto.com/iphone/">
+            <img src="img/iphonepad.jpg" class="imgsm">
+          </a>
+          <div class="ppt">iOS apps</div>
+          <div class="ppd">
+            I'we written an <a href="http://badmephisto.com/iphone/">iOS app</a> that helps people access and remember Rubik's Cube algorithms. I've later also ported it to Android. There's also my little humble 2-4 player iPad game called <a href="http://itunes.apple.com/us/app/loud-snakes/id523479541?mt=8">Loud Snakes</a> :)
+        </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="http://cs.stanford.edu/people/karpathy/glass/">
+            <img src="img/glass.jpg" class="imgsm">
+          </a>
+          <div class="ppt">Glass Winners</div>
+          <div class="ppd">
+            This page was a fun hack. Google was inviting people to become Glass explorers through Twitter (#ifihadclass) and I set out to document the winners of the mysterious process for fun. I didn't expect that it would go on to explode on internet and get me mentions in <a href="http://techcrunch.com/2013/03/31/glass-explorer-apps/">TechCrunch</a>, Verge, and many other places.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="https://www.youtube.com/watch?v=mSaO0Ul_55c">
+            <img src="img/tetris.jpg" class="imgsm">
+          </a>
+          <div class="ppt">Tetris AI</div>
+          <div class="ppd">
+            I think I enjoy writing AIs for games more than I like playing games myself - Over the years I wrote several for World of Warcraft, Farmville, Chess, and <a href="https://www.youtube.com/watch?v=mSaO0Ul_55c">Tetris</a>. On somewhat related note, I also wrote a super-fun <a href="http://code.google.com/p/nplayertetris/">Multiplayer Co-op Tetris</a>.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+-->
+</div>
+
+<!-- place js at end for faster loading -->
+<script src="jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+var more_projects_shown = false;
+function start() {
+  $("#showmoreprojects").click(function() {
+    if(!more_projects_shown) {
+      $("#moreprojects").slideDown('fast', function() {
+        $("#showmoreprojects").text('hide');
+      });
+      more_projects_shown = true;
+    } else {
+      $("#moreprojects").slideUp('fast', function() {
+        $("#showmoreprojects").text('show more');
+      });
+      more_projects_shown = false;
+    }
+  });
+
+  var more_pubs_shown = false;
+  $("#showmorepubs").click(function() {
+    if(!more_pubs_shown) {
+      $("#morepubs").slideDown('fast', function() {
+        $("#showmorepubs").text('hide');
+      });
+      more_pubs_shown = true;
+    } else {
+      $("#morepubs").slideUp('fast', function() {
+        $("#showmorepubs").text('show more');
+      });
+      more_pubs_shown = false;
+    }
+  });
+
+}
+
+</script>
+
 </body>
-<!--Hey babe-->
+<footer>
+  <p>© 2018 Tyler Hughes</p>
+</footer>
 </html>
