@@ -390,3 +390,11 @@ font-weight: 600;
 .t2what {
 
 }
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
