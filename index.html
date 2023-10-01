@@ -31,7 +31,7 @@
     <div id="headertext">
       <div id="htname">Tyler W. Hughes</div>
       <div id="htdesc">Research Scientist</div>
-      <div id="htem">twhughes _at_ stanford.edu</div>
+      <div id="htem">tylerwhughes91 _at_ gmail.com</div>
       <div id="icons">
         <div class="svgico">
           <a href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en"><img src="icons/gscholar.png" width="40px"></a>
@@ -54,16 +54,23 @@
 
  <h2>Bio</h2>
  <p>
-  I'm a research scientist who specializes in electromagnetic simulation and design algorithms.  
+  I'm a research scientist with a background in physics, photonics, machine learning, and software engineering.
   I currently work at Flexcompute Inc., where we are working to bring fast, large scale electromangetic simulation to emerging applications.  
-  <a href="pdfs/Resume.pdf">Here</a> is a link to my resume, last updated March 2021.
+  <a href="pdfs/Resume.pdf">Here</a> is a link to my resume, last updated October 2023.
 
   <br><br>
- In October of 2019, i completed my PhD in  <a href="https://web.stanford.edu/dept/app-physics/cgi-bin/"> Applied Physics</a> at Stanford University, where I was advised by Professor <a href="https://web.stanford.edu/group/fan/">Shanhui Fan</a>.
- During my PhD, I developed mathematical and numerical techniques for inverse design and optimization of photonic structures based on the 'adjoint variable method' (AVM).  
- This technique allows one to efficiently compute how a device's performance will change with respect to a change in numerous design parameters using only a single additional simulation.  
- This information is incredibly useful and can be used to perform sensitivity analysis or gradient based optimization.  Many of my papers extend this method and apply it to large-scale optimization of various photonic devices. 
- I have also drawn connections between the mathematics of the technique and physical processes occuring in photonic devices, using these connections to come up with new ways to <a href="https://www.osa-opn.org/home/newsroom/2018/july/toward_all-optical_artificial_neural_networks/">train optical machine learning hardware</a> and <a href="https://github.com/fancompute/wavetorch">build analog recurrent neural networks using waves</a>.
+
+   My work lives somewhere at the intersection of computer science and physics. On the one hand, I write software to perform electromagnetic simulations, with an emphasis on making these simulations differentiable through the "adjoint" method. On the other hand, I explore novel approaches to performing analog computation using light, most notably for machine learning applications. As a result, a lot of my work combines components of software engineering, machine learning, and high perforance numerical computing. Additionally, a core emphasis is also placed on how these topics interface with the underlying physics.
+
+  <br><br>
+Since 2019, I've been working at Flexcompute Inc. Among various other projects, we are developing the cloud-based, commercial electromagentic solver <a href="https://www.flexcompute.com/tidy3d/solver/">"Tidy3D"</a>. I am the prinicple developer of the open source, python-based <a href="https://github.com/flexcompute/tidy3d">front end</a> that enables users to define their simulations, manage their interactions with our servers, and postprocess the results.
+
+Additionally, I developed the "adjoint" plugin, which makes Tidy3D compatible with Google's JAX software for automatic differentiation. This plugin allows users to write arbitrary functions involving an electromagnetic simulation and differentiate the output using only one additional simulation. This method enables large scale, gradient-based optimization of photonic devices known as "inverse design". For more details, see this <a href="https://docs.flexcompute.com/projects/tidy3d/en/latest/notebooks/AdjointPlugin8WaveguideBend.html">example</a> from our docs.
+
+  <br><br>
+ Between 2014 and 2019, I completed my PhD in  <a href="https://web.stanford.edu/dept/app-physics/cgi-bin/"> Applied Physics</a> at Stanford University, where I was advised by Professor <a href="https://web.stanford.edu/group/fan/">Shanhui Fan</a>.
+ During my PhD, I developed several mathematical and numerical techniques related to this inverse design technique and the adjoint method enabling it.
+ I also made some fundamental connections between the mathematics of the technique and physical processes occuring in photonic devices, which led to proposals for <a href="https://www.osa-opn.org/home/newsroom/2018/july/toward_all-optical_artificial_neural_networks/">training optical machine learning hardware</a> and <a href="https://github.com/fancompute/wavetorch">building analog recurrent neural networks using waves</a>.
  As part of my PhD work, I was also involved in the <a href="https://achip.stanford.edu/"> Accelerator on a Chip International Program (ACHIP)</a>, which is working towards building miniature particle accelerators on a chip using advanced laser and nanofabrication technology (<a href="https://www.youtube.com/watch?v=V89qvy8whxY&feature=youtu.be">video explanation</a>).  
  I have been heavily involved in the scaling of these accelerators using integrated photonic circuits and control methods <a href="https://arxiv.org/pdf/1709.04441.pdf">built directly onto the chip</a>.
 
@@ -71,7 +78,7 @@
   I grew up in San Diego and went to the University of Michigan for my undergraduate degree, where I graduated with a BS in physics.  At Michigan, I researched fabrication techniques for economical thin-film solar cells with <a href="http://www.umich.edu/~ocm/">Prof. Stephen Forrest</a>.  Between my undergrad and PhD, I first worked on trapped ion platforms for quantum computation at the National University of Singpore's Centre for Quantum Technologies.  After that, I worked as a junior software engineer at <a href="https://www.gudtech.com/">GudTech Inc.</a>
 
   <br><br>
-  When I’m not doing science, you can find me surfing, rock climbing, or experimenting with various fermentation projects.
+  When I’m not doing science, you can find me traveling, cooking, or running around central park.
 </p>
 
 <!------------------------------ TIMELINE ------------------------------>
@@ -166,6 +173,155 @@
       <div class="pubv" style="display:inline-block">Manuscript In Preparation</div>
 			<br><br>
     </div> -->
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/ExperimentalBackprop.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Experimentally realized in situ backpropagation for deep learning in photonic neural networks</div>
+            <div class="pubd">This work experimentally verified the optical backpropagation method for training optical neural networks that I published in 2018. Our collaborators built an integrated optical circuit to implement a photonic neural network and measured the gradients of a machine learning task with respect to the network parameters using interference between optical signals.</div>
+            <div class="puba">Sunil Pai, Zhanghao Sun, <b>Tyler W. Hughes</b>, Taewon Park, Ben Bartlett, Ian AD Williamson, Momchil Minkov, Maziyar Milanizadeh, Nathnael Abebe, Francesco Morichetti, Andrea Melloni, Shanhui Fan, Olav Solgaard, David AB Miller</div>
+            <div class="pubv">Science (2023)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://www.science.org/doi/abs/10.1126/science.ade8450"target=blank>Paper</a></li>
+                <li><a href="https://arxiv.org/pdf/2205.08501.pdf"target=blank>arXiv</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/Anderson.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Anderson localization of electromagnetic waves in three dimensions</div>
+            <div class="pubd">In this work, we used our electromagnetic simulator to observe direct evidence of Anderson Localization in 3D optical systems for the first time, settling a long standing debate in the physics community. This work required thousands of simulations of light scattering in extremely large ensembles of random spheres to gather statistics to back up these claims.</div>
+            <div class="puba">Alexey Yamilov, Sergey E Skipetrov, <b>Tyler W. Hughes</b>, Momchil Minkov, Zongfu Yu, Hui Cao</div>
+            <div class="pubv">Nature Physics (2023)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://www.nature.com/articles/s41567-023-02091-7"target=blank>Paper</a></li>
+                <li><a href="https://arxiv.org/pdf/2203.02842.pdf"target=blank>arXiv</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/Metalens.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">A perspective on the pathway toward full wave simulation of large area metalenses</div>
+            <div class="pubd">We used Flexcompute's Tidy3D solver to demonstrate the full wave simulation of a metalens with a diameter of hundreds of wavelengths, including the focal length. In this perspective, we argue that the full accuracy provided by this brute force approach provides a viable pathway towards metalens design.</div>
+            <div class="puba"><b>Tyler W. Hughes</b>, Momchil Minkov, Victor Liu, Zongfu Yu, Shanhui Fan</div>
+            <div class="pubv">Applied Physics Letters (2021)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://pubs.aip.org/aip/apl/article/119/15/150502/40471"target=blank>Paper</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/ParallelProgramming.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Parallel programming of an arbitrary feedforward photonic network</div>
+            <div class="pubd">We introduced a graph-topological approach that generalizes feedforward photonic networks. This framework presents an algorithm that enables them to be programmed efficiently to implement arbitrary linear operations on demand.</div>
+            <div class="puba">Sunil Pai, Ian AD Williamson, <b>Tyler W. Hughes</b>, Momchil Minkov, Olav Solgaard, Shanhui Fan, David AB Miller</div>
+            <div class="pubv">IEEE Journal of Selected Topics in Quantum Electronics (2020)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://ieeexplore.ieee.org/ielaam/2944/8918503/9103211-aam.pdf"target=blank>Paper</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/Legume.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Inverse design of photonic crystals through automatic differentiation</div>
+            <div class="pubd">We implemented the plane-wave expansion and the guided-mode expansion methods using an automatic differentiation library, and used this gradient information optimize the dispersion of a photonic crystal waveguide and the quality factor of an ultrasmall cavity in a lithium niobate slab.</div>
+            <div class="puba">Momchil Minkov, Ian AD Williamson, Lucio C Andreani, Dario Gerace, Beicheng Lou, Alex Y Song, <b>Tyler W. Hughes</b>, Shanhui Fan</div>            
+            <div class="pubv">ACS Photonics (2020)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acsphotonics.0c00327"target=blank>Paper</a></li>
+                <li><a href="https://arxiv.org/pdf/2003.00379"target=blank>arXiv</a></li>                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="images/ExperimentalActivation.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Experimental realization of arbitrary activation functions for optical neural networks</div>
+            <div class="pubd">We experimentally demonstrated an on-chip electro-optic circuit for realizing arbitrary nonlinear activation functions for optical neural networks (ONNs). The circuit operates by converting a small portion of the input optical signal into an electrical signal and modulating the intensity of the remaining optical signal. </div>
+            <div class="puba">Monireh Moayedi Pour Fard, Ian AD Williamson, Matthew Edwards, Ke Liu, Sunil Pai, Ben Bartlett, Momchil Minkov, <b>Tyler W. Hughes</b>, Shanhui Fan, Thien-An Nguyen</div>
+            <div class="pubv">Optics Express (2020)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-8-12138"target=blank>Paper</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
 
     <div class="pubwrap">
       <div class="row">
