@@ -92,7 +92,7 @@ function render(map){
 			if (map[x][y]==0 && (x != cx || y != cy )){
 				context.fillStyle="rgb(22,22,22)";
 				context.fillRect(x*roomsize,y*roomsize,roomsize,roomsize);
-			} else if (map[x][y]==1 || (cx = x && cy == y)){
+			} else if (map[x][y]==1 || (cx == x && cy == y)){
 				context.fillStyle="rgb("+c1+","+c2+","+c3+")";
 				context.fillRect(x*roomsize,y*roomsize,roomsize,roomsize);
 			} 
