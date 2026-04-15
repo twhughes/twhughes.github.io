@@ -5,967 +5,809 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tyler W. Hughes</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link href="style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 
-<!-- Tracking code -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-103784586-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-103784586-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
-<body onload="start()">
+<body>
 
-<div id="header" class="bg1">
-<!--   <div id="headerblob"> -->
-    <img src="images/tyler_alt.JPG" class="img-circle imgme" height=250px width=250px>
-    <div id="headertext">
-      <div id="htname">Tyler W. Hughes</div>
-      <div id="htdesc">Head of Photonics</div>
-      <div id="htem">tylerwhughes91 _at_ gmail.com</div>
-      <div id="icons">
-        <div class="svgico">
-          <a href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en"><img src="icons/gscholar.png" width="40px"></a>
-        </div>
-        <div class="svgico">
-          <a href="https://github.com/twhughes"><img src="icons/github.png" width="40px"></a>
-        </div>
-        <div class="svgico">
-          <a href="https://www.linkedin.com/in/tylerwhughes/"><img src="icons/LinkedIn.png" width="40px"></a>
-        </div>
-      </div>
+<!-- ==================== NAVIGATION ==================== -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-name">Tyler W. Hughes</span>
+    <div class="nav-links">
+      <a href="#bio">Bio</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="#patents">Patents</a>
+      <a href="#oss">Open Source</a>
+      <a href="#courses">Courses</a>
+      <a href="pdfs/Resume.pdf">Resume</a>
     </div>
-  <!-- </div> -->
-</div>
-
-<!------------------------------ BIO ------------------------------>
-
-
-<div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
-
- <h2>Bio</h2>
- <p>
-  I'm a scientist with a background in physics, photonics, machine learning, and software engineering.
-  I am currently the Head of Photonics at Flexcompute Inc., where we are working to bring fast, large-scale electromagnetic simulation to emerging applications.  
-  <a href="pdfs/Resume.pdf">Here</a> is a link to my resume, last updated November 2025.
-
-  <br><br>
-
-   My work lives somewhere at the intersection of computer science and physics. On the one hand, I write software to perform electromagnetic simulations, with an emphasis on making these simulations differentiable through the "adjoint" method. On the other hand, I explore novel approaches to performing analog computation using light, most notably for machine learning applications. As a result, a lot of my work combines components of software engineering, machine learning, and high-performance numerical computing. Additionally, a core emphasis is also placed on how these topics interface with the underlying physics.
-
-  <br><br>
-Since 2019, I've been working at Flexcompute Inc. Among various other projects, we are developing the cloud-based, commercial electromagnetic solver <a href="https://www.flexcompute.com/tidy3d/solver/">"Tidy3D"</a>. I am the principal developer of the open-source, Python-based <a href="https://github.com/flexcompute/tidy3d">front end</a> that enables users to define their simulations, manage their interactions with our servers, and postprocess the results.
-
-Additionally, I developed the automatic differentiation features for Tidy3D, which makes the simulation compatible with machine learning tools like JAX and PyTorch. This plugin allows users to write arbitrary functions involving an electromagnetic simulation and differentiate the output using only one additional simulation. This method enables large-scale, gradient-based optimization of photonic devices known as "inverse design." For more details, see this <a href="https://docs.flexcompute.com/projects/tidy3d/en/latest/notebooks/AdjointPlugin8WaveguideBend.html">example</a> from our docs.
-  <br><br>
- Between 2014 and 2019, I completed my PhD in  <a href="https://web.stanford.edu/dept/app-physics/cgi-bin/"> Applied Physics</a> at Stanford University, where I was advised by Professor <a href="https://web.stanford.edu/group/fan/">Shanhui Fan</a>.
- During my PhD, I developed several mathematical and numerical techniques related to this inverse design technique and the adjoint method enabling it.
- I also made some fundamental connections between the mathematics of the technique and physical processes occurring in photonic devices, which led to proposals for <a href="https://www.osa-opn.org/home/newsroom/2018/july/toward_all-optical_artificial_neural_networks/">training optical machine learning hardware</a> and <a href="https://github.com/fancompute/wavetorch">building analog recurrent neural networks using waves</a>.
- As part of my PhD work, I was also involved in the <a href="https://achip.stanford.edu/"> Accelerator on a Chip International Program (ACHIP)</a>, which is working towards building miniature particle accelerators on a chip using advanced laser and nanofabrication technology (<a href="https://www.youtube.com/watch?v=V89qvy8whxY&feature=youtu.be">video explanation</a>).  
- I have been heavily involved in the scaling of these accelerators using integrated photonic circuits and control methods <a href="https://arxiv.org/pdf/1709.04441.pdf">built directly onto the chip</a>.
-
-  <br><br>
-  I grew up in San Diego and went to the University of Michigan for my undergraduate degree, where I graduated with a BS in physics.  At Michigan, I researched fabrication techniques for economical thin-film solar cells with <a href="http://www.umich.edu/~ocm/">Prof. Stephen Forrest</a>.  Between my undergrad and PhD, I first worked on trapped ion platforms for quantum computation at the National University of Singapore's Centre for Quantum Technologies.  After that, I worked as a junior software engineer at <a href="https://www.gudtech.com/">GudTech Inc.</a>
-
-  <br><br>
-  When I’m not doing science, you can find me traveling, cooking, or running around Central Park.
-</p>
-
-<!------------------------------ TIMELINE ------------------------------>
-
   </div>
-  <hr class="soft">
-  <div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+</nav>
 
-  <h2>Timeline</h2>
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <div class="hero-inner">
+    <img src="images/tyler_alt.JPG" class="hero-photo" alt="Tyler W. Hughes">
+    <div class="hero-text">
+      <h1 class="hero-name">Tyler W. Hughes</h1>
+      <div class="hero-title">Head of Photonics · Flexcompute Inc.</div>
+<div class="hero-icons">
+        <a href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en" title="Google Scholar">
+          <img src="icons/gscholar.png" alt="Google Scholar" width="20" height="20">
+        </a>
+        <a href="https://github.com/twhughes" title="GitHub">
+          <img src="icons/github.svg" alt="GitHub" width="20" height="20">
+        </a>
+        <a href="https://www.linkedin.com/in/tylerwhughes/" title="LinkedIn">
+          <img src="icons/linkedin.svg" alt="LinkedIn" width="20" height="20">
+        </a>
+      </div>
+      <div class="hero-tags">
+        <span class="hero-tag">Differentiable Simulation</span>
+        <span class="hero-tag">Inverse Design</span>
+        <span class="hero-tag">AI for Science</span>
+        <span class="hero-tag">Agentic Workflows</span>
+        <span class="hero-tag">Physics-informed ML</span>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <ul>
-    <li>
-      <span class="t2when">2019–present</span><br>
-      <span class="t2who">Flexcompute Inc.</span><br>
-      <span class="t2what">
-        Head of Photonics (2025–present); Principal Scientist (2024–2025); Research Scientist (2019–2024). <br> Developing fast simulation methods for high-impact electromagnetic problems.
-      </span>
-    </li>
-
-    <li>
-      <span class="t2when">Summer 2018</span><br>
-      <span class="t2who">Machine Learning Intern at <a href="https://rasa.com/">Rasa</a></span><br>
-      <span class="t2what">Open source conversational AI. Natural language understanding.</span>
-    </li>
-
-    <li>
-      <span class="t2when">2014–2019</span> <br>
-      <span class="t2who">Applied Physics PhD Student at Stanford University</span> <br>
-      <span class="t2what">Photonic-based machine learning hardware. Electromagnetic inverse design. Laser-driven accelerators on a chip. Advisor: <a href="http://web.stanford.edu/group/fan/">Shanhui Fan</a></span>
-    </li>
-
-    <li>
-      <span class="t2when">2014</span><br>
-      <span class="t2who">Junior Software Engineer at <a href="https://gudtech.com/">Gudtech Inc.</a></span><br>
-      <span class="t2what">Full stack development of inventory management software.</span>
-    </li>
-
-    <li>
-      <span class="t2when">2013</span><br>
-      <span class="t2who">Research Assistant at National University of Singapore – <a href="https://www.quantumlah.org/">Centre for Quantum Technologies</a></span> <br>
-      <span class="t2what">Surface ion trapping for quantum information processing. Advisor: <a href="http://coldiongroup.wixsite.com/index">Manas Mukherjee</a></span>
-    </li>
-
-    <li>
-      <span class="t2when">2010–2013</span><br>
-      <span class="t2who">Undergraduate Research Assistant at University of Michigan – <a href="http://umich.edu/~ocm/index.html">Optoelectronic Components and Materials</a></span> <br>
-      <span class="t2what">Wafer reuse for low-cost, thin-film III–V photovoltaic devices. Advisor: <a href="http://umich.edu/~ocm/People%20pages/stevefor.html">Stephen Forrest</a></span>
-    </li>
-
-    <li>
-      <span class="t2when">2009–2013</span><br>
-      <span class="t2who">BS student at University of Michigan at Ann Arbor</span><br>
-      <span class="t2what">Major: Physics</span>
-    </li>
-  </ul>
-
-
-  <!-- <span class="t2when">Summer 2018:</span>
-  <span class="t2who">Machine Learning Engineer Intern at <a href="https://rasa.com/">Rasa</a></span><br>
-  <span class="t2what">- Natural language understanding (tbd).</span>
-
-  <br>
-  <span class="t2when">2014-present:</span> <br>
-      <span class="t2who">Applied Physics PhD Student at Stanford University</span> <br>
-      <span class="t2what">- Laser-driven accelerators on a chip. Photonic-based machine learning hardware. Advisor: <a href="http://web.stanford.edu/group/fan/">Shanhui Fan</a> </span>
-
-  <br>
-  <span class="t2when">2014:</span>
-  <span class="t2who">Junior Software Engineer at <a href="https://gudtech.com/">Gudtech Inc.</a></span><br>
-  <span class="t2what">- Full stack development of inventory management software.</a></span>
-
-  <br>
-  <span class="t2when">2013:</span>
-  <span class="t2who">Research Assistant at National University of Singapore - <a href="https://www.quantumlah.org/">Centre for Quantum Technologies</a></span> <br>
-  <span class="t2what">- Surface ion trapping for quantum information processing.  Advisor: <a href="http://coldiongroup.wixsite.com/index">Manas Mukherjee</a></span>
-
-  <br>
-  <span class="t2when">2010-2013:</span>
-  <span class="t2who">Undegraduate Research Assistant at University of Michigan - <a href="http://umich.edu/~ocm/index.html">Optoelectronic Components and Materials</a> </span> <br>
-  <span class="t2what">- Wafer reuse for low cost, thin film III-V photovoltaic devices. Advisor: <a href="http://umich.edu/~ocm/People%20pages/stevefor.html">Stephen Forrest</a></span>
-
-  <br>
-  <span class="t2when">2009-2013:</span>
-  <span class="t2who">BS student at University of Michigan at Ann Arbor</span><br>
-  <span class="t2what">- Major: Physics</span> -->
-
+<div class="stats-strip">
+  <div class="stats-inner">
+    <a class="stat" href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en" target="_blank">
+      <span class="stat-num">3,777</span>
+      <span class="stat-label">Citations</span>
+    </a>
+    <a class="stat" href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en" target="_blank">
+      <span class="stat-num">23</span>
+      <span class="stat-label">h-index</span>
+    </a>
+    <a class="stat" href="#publications">
+      <span class="stat-num">9</span>
+      <span class="stat-label">1st-author papers</span>
+    </a>
+    <a class="stat" href="https://github.com/fancompute/ceviche" target="_blank">
+      <span class="stat-num">409 ★</span>
+      <span class="stat-label">ceviche</span>
+    </a>
+    <a class="stat" href="https://github.com/flexcompute/tidy3d" target="_blank">
+      <span class="stat-num">330 ★</span>
+      <span class="stat-label">tidy3d</span>
+    </a>
+    <a class="stat" href="https://github.com/fancompute/angler" target="_blank">
+      <span class="stat-num">189 ★</span>
+      <span class="stat-label">angler</span>
+    </a>
+  </div>
 </div>
 
-<hr class="soft">
+<main>
 
-<!------------------------------ PUBLICATIONS ------------------------------>
+<!-- ==================== BIO ==================== -->
+<section class="section" id="bio">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <div class="bio-body">
+      <p>
+        I like simulating the physical world with computers and using those simulations to design and optimize useful things. My focus is <em>differentiable simulation</em>: writing physics solvers that can compute not just what a system does, but exactly how it responds to changes, enabling gradient-based optimization over designs with enormous numbers of parameters.
+      </p>
+      <p>
+        I'm currently Head of Photonics at <a href="https://www.flexcompute.com/">Flexcompute Inc.</a>, where I lead a technical team building AI-driven simulation products. A major part of my focus is on the agentic entrypoints to these tools: we've built an <a href="https://docs.flexcompute.com/projects/tidy3d/en/v2.10.0/ai/flex_agent.html">MCP server</a> that exposes our electromagnetic solver to AI agents, and I'm deeply involved in shaping how that gets used to solve real photonic design and optimization problems. I'm drawn to this boundary where AI learns about and reasons over the physical world, both as a way to accelerate scientific work and as a rich domain for fundamental AI research.
+      </p>
+      <p>
+        Earlier at Flexcompute, I was the principal developer of <a href="https://github.com/flexcompute/tidy3d">Tidy3D</a> (330 ★ on GitHub), our open-source Python framework for cloud-based, GPU-accelerated electromagnetic simulation. I was in the weeds on everything: writing solver code, building and maintaining the Python client, and leading community and documentation efforts. My deepest technical contribution was making the entire simulation framework differentiable: users can now differentiate through a full 3D Maxwell's equations solve running on a cloud GPU cluster in a single adjoint pass, compatible with JAX and PyTorch, enabling large-scale gradient-based inverse design with hundreds of thousands of parameters.
+      </p>
+      <p>
+        Before Flexcompute, I completed my PhD in <a href="https://web.stanford.edu/dept/app-physics/cgi-bin/">Applied Physics</a> at Stanford, advised by <a href="https://web.stanford.edu/group/fan/">Prof. Shanhui Fan</a>. My PhD work established some deep connections between physics and computation: I showed that <a href="https://advances.sciencemag.org/content/5/12/eaay6946">wave physics maps exactly to recurrent neural networks</a>, proposed and experimentally demonstrated <a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-5-7-864">backpropagation implemented in light</a> for training optical neural networks, and developed adjoint methods for electromagnetic inverse design.
+      </p>
+      <p>
+        I studied physics at the University of Michigan and now live in New York City. When I'm not building things I'm usually traveling, cooking, or running around Central Park. <a href="pdfs/Resume.pdf">Resume here</a>, last updated November 2025.
+      </p>
+    </div>
+  </div>
+</section>
 
-<div class="container" id="pubes">
-  <h2>Selected Publications</h2>
-  <div id="pubs">
+<!-- ==================== WRITING ==================== -->
+<section class="section" id="writing">
+  <div class="section-inner">
+    <div class="section-label">Writing</div>
+    <div class="writing-list">
 
-<!--     <div class="pubwrap">
-      <div class="pubd" style="display:inline-block">[coming soon] Reconfigurable Photonic Circuit for Control of Dielectric Laser Accelerators.</div>
-      <div class="puba" style="display:inline-block"><b>Tyler W. Hughes</b>, Momchil Minkov, and Shanhui Fan.</div>
-      <div class="pubv" style="display:inline-block">Manuscript In Preparation</div>
-      <br><br>
-    </div> -->
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/ExperimentalBackprop.png">
+      <div class="writing-item">
+        <a class="writing-thumb" href="https://engineering.flexcompute.com/articles/autoresearch-photonic-design/" target="_blank">
+          <img src="https://engineering.flexcompute.com/images/autoresearch/progression_gif_waveguide_crossing.gif" alt="AI agent designing photonic component">
+        </a>
+        <div class="writing-body">
+          <div class="writing-meta">
+            <span class="writing-tag">Research</span>
+            <span class="writing-source">Flexcompute Engineering Blog</span>
           </div>
+          <a class="writing-title" href="https://engineering.flexcompute.com/articles/autoresearch-photonic-design/" target="_blank">
+            Can AI Agents Autonomously Design Components on Photonic Chips?
+          </a>
+          <p class="writing-desc">AI agents equipped with an electromagnetic simulator and design rule checker tackle photonic component design — waveguide bends, crossings, splitters, and demultiplexers — through iterative simulation and optimization. Explores where agentic AI excels and where it hits the limits of parametric search.</p>
         </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Experimentally realized in situ backpropagation for deep learning in photonic neural networks</div>
-            <div class="pubd">This work experimentally verified the optical backpropagation method for training optical neural networks that I published in 2018. Our collaborators built an integrated optical circuit to implement a photonic neural network and measured the gradients of a machine learning task with respect to the network parameters using interference between optical signals.</div>
-            <div class="puba">Sunil Pai, Zhanghao Sun, <b>Tyler W. Hughes</b>, Taewon Park, Ben Bartlett, Ian AD Williamson, Momchil Minkov, Maziyar Milanizadeh, Nathnael Abebe, Francesco Morichetti, Andrea Melloni, Shanhui Fan, Olav Solgaard, David AB Miller</div>
-            <div class="pubv">Science (2023)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://www.science.org/doi/abs/10.1126/science.ade8450"target=blank>Paper</a></li>
-                <li><a href="https://arxiv.org/pdf/2205.08501.pdf"target=blank>arXiv</a></li>
-            </div>
+        <a class="writing-arrow" href="https://engineering.flexcompute.com/articles/autoresearch-photonic-design/" target="_blank">→</a>
+      </div>
+
+      <div class="writing-item">
+        <a class="writing-thumb" href="https://engineering.flexcompute.com/articles/photonic-inverse-design-45-lines/" target="_blank">
+          <img src="https://engineering.flexcompute.com/images/photonic-inverse-design/evolution.gif" alt="Waveguide bend optimization evolving">
+        </a>
+        <div class="writing-body">
+          <div class="writing-meta">
+            <span class="writing-tag">Tutorial</span>
+            <span class="writing-source">Flexcompute Engineering Blog</span>
+          </div>
+          <a class="writing-title" href="https://engineering.flexcompute.com/articles/photonic-inverse-design-45-lines/" target="_blank">
+            Designing a Photonic Chip Component with ~45 Lines of Python
+          </a>
+          <p class="writing-desc">A compact introduction to photonic inverse design using Tidy3D. Combining electromagnetic simulation with the adjoint method, a simple 10-iteration optimization loop discovers a waveguide bend achieving ~89% power transmission through a 90° corner.</p>
+        </div>
+        <a class="writing-arrow" href="https://engineering.flexcompute.com/articles/photonic-inverse-design-45-lines/" target="_blank">→</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TIMELINE ==================== -->
+<section class="section" id="timeline">
+  <div class="section-inner">
+    <div class="section-label">Timeline</div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="tl-date">2019 – present</div>
+        <div class="tl-org">
+          <img class="tl-logo" src="icons/flexcompute.png" alt="Flexcompute" onerror="this.style.display='none'">
+          Flexcompute Inc.
+        </div>
+        <div class="tl-desc">
+          Head of Photonics (2025–present); Principal Scientist (2024–2025); Research Scientist (2019–2024).<br>
+          Building differentiable simulation frameworks, agentic design workflows, and an MCP server connecting our electromagnetic solver to AI agents. Principal developer of <a href="https://github.com/flexcompute/tidy3d">Tidy3D</a> and its adjoint-based automatic differentiation plugin.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">Summer 2018</div>
+        <div class="tl-org">
+          <img class="tl-logo" src="icons/rasa.png" alt="Rasa" onerror="this.style.display='none'">
+          <a href="https://rasa.com/">Rasa</a> · Machine Learning Intern
+        </div>
+        <div class="tl-desc">Open source conversational AI. Natural language understanding.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">2014 – 2019</div>
+        <div class="tl-org">
+          <img class="tl-logo" src="icons/stanford.png" alt="Stanford" onerror="this.style.display='none'">
+          Applied Physics PhD · Stanford University
+        </div>
+        <div class="tl-desc">
+          Photonic-based machine learning hardware. Electromagnetic inverse design. Laser-driven accelerators on a chip.
+          Advisor: <a href="http://web.stanford.edu/group/fan/">Shanhui Fan</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">2014</div>
+        <div class="tl-org">
+          <img class="tl-logo" src="icons/gudtech.png" alt="GudTech" onerror="this.style.display='none'">
+          <a href="https://gudtech.com/">Gudtech Inc.</a> · Junior Software Engineer
+        </div>
+        <div class="tl-desc">Full stack development of inventory management software.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">2013</div>
+        <div class="tl-org">
+          <img class="tl-logo" src="icons/nus.png" alt="NUS" onerror="this.style.display='none'">
+          National University of Singapore — <a href="https://www.quantumlah.org/">Centre for Quantum Technologies</a>
+        </div>
+        <div class="tl-desc">
+          Surface ion trapping for quantum information processing.
+          Advisor: <a href="http://coldiongroup.wixsite.com/index">Manas Mukherjee</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">2010 – 2013</div>
+        <div class="tl-org">
+          <img class="tl-logo" src="icons/umich.png" alt="University of Michigan" onerror="this.style.display='none'">
+          University of Michigan — <a href="http://umich.edu/~ocm/index.html">Optoelectronic Components and Materials</a>
+        </div>
+        <div class="tl-desc">
+          Wafer reuse for low-cost, thin-film III–V photovoltaic devices.
+          Advisor: <a href="http://umich.edu/~ocm/People%20pages/stevefor.html">Stephen Forrest</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-date">2009 – 2013</div>
+        <div class="tl-org">
+          <img class="tl-logo" src="icons/umich.png" alt="University of Michigan" onerror="this.style.display='none'">
+          University of Michigan at Ann Arbor — BS Physics
+        </div>
+        <div class="tl-desc">Major: Physics</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PUBLICATIONS ==================== -->
+<section class="section" id="publications">
+  <div class="section-inner">
+    <div class="section-label">Selected Publications</div>
+    <div class="pub-list">
+
+      <div class="pub-section-divider">First &amp; Co-First Author</div>
+
+      <div class="pub-item">
+        <div class="pub-thumb"><img src="images/RNN.png" alt="Wave physics RNN"></div>
+        <div class="pub-content">
+          <div class="pub-badges">
+            <div class="pub-venue">Science Advances (2019)</div>
+            <span class="pub-first-author-tag">Co-First Author</span>
+          </div>
+          <div class="pub-title">Wave Physics as an Analog Recurrent Neural Network</div>
+          <div class="pub-desc">We show that wave-based physical systems map exactly to the mathematics of recurrent neural networks. Using this correspondence, wave systems can be trained to passively perform machine learning tasks on sequential data — raw audio, optical signals — using only wave propagation through a structure.</div>
+          <div class="pub-authors"><strong>Tyler W. Hughes*</strong>, Ian A.D. Williamson*, Momchil Minkov, and Shanhui Fan</div>
+          <div class="pub-links">
+            <a href="https://github.com/fancompute/wavetorch" target="_blank">Software</a>
+            <a href="https://arxiv.org/pdf/1904.12831.pdf" target="_blank">arXiv</a>
+            <a href="https://advances.sciencemag.org/content/5/12/eaay6946" target="_blank">Paper</a>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/Anderson.png">
+      <div class="pub-item">
+        <div class="pub-thumb"><img src="images/ANN4.png" alt="Training photonic neural networks"></div>
+        <div class="pub-content">
+          <div class="pub-badges">
+            <div class="pub-venue">Optica (2018)</div>
+            <span class="pub-first-author-tag">First Author</span>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Anderson localization of electromagnetic waves in three dimensions</div>
-            <div class="pubd">In this work, we used our electromagnetic simulator to observe direct evidence of Anderson localization in 3D optical systems for the first time, settling a long-standing debate in the physics community. This work required thousands of simulations of light scattering in extremely large ensembles of random spheres to gather statistics to back up these claims.</div>
-            <div class="puba">Alexey Yamilov, Sergey E Skipetrov, <b>Tyler W. Hughes</b>, Momchil Minkov, Zongfu Yu, Hui Cao</div>
-            <div class="pubv">Nature Physics (2023)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://www.nature.com/articles/s41567-023-02091-7"target=blank>Paper</a></li>
-                <li><a href="https://arxiv.org/pdf/2203.02842.pdf"target=blank>arXiv</a></li>
-            </div>
+          <div class="pub-title">Training of Photonic Neural Networks through In-Situ Backpropagation and Gradient Measurement</div>
+          <div class="pub-desc">We introduce a method for measuring adjoint sensitivity directly as an intensity measurement in a photonic device, allowing the backpropagation algorithm to be physically implemented using optical signals. This enables efficient in-situ training of artificial neural networks built from integrated photonic circuits.</div>
+          <div class="pub-authors"><strong>Tyler W. Hughes</strong>, Momchil Minkov, Yu Shi, and Shanhui Fan</div>
+          <div class="pub-links">
+            <a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-5-7-864" target="_blank">Paper</a>
+            <a href="https://www.osa.org/en-us/about_osa/newsroom/news_releases/2018/researchers_move_closer_to_completely_optical_arti/" target="_blank">News Release</a>
           </div>
         </div>
       </div>
-    </div>
 
-
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/Metalens.png">
+      <div class="pub-item">
+        <div class="pub-thumb"><img src="images/FMD.png" alt="Forward-mode differentiation Maxwell"></div>
+        <div class="pub-content">
+          <div class="pub-badges">
+            <div class="pub-venue">ACS Photonics (2019)</div>
+            <span class="pub-first-author-tag">First Author</span>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">A perspective on the pathway toward full wave simulation of large area metalenses</div>
-            <div class="pubd">We used Flexcompute's Tidy3D solver to demonstrate the full wave simulation of a metalens with a diameter of hundreds of wavelengths, including the focal length. In this perspective, we argue that the full accuracy provided by this brute force approach provides a viable pathway towards metalens design.</div>
-            <div class="puba"><b>Tyler W. Hughes</b>, Momchil Minkov, Victor Liu, Zongfu Yu, Shanhui Fan</div>
-            <div class="pubv">Applied Physics Letters (2021)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://pubs.aip.org/aip/apl/article/119/15/150502/40471"target=blank>Paper</a></li>
-            </div>
+          <div class="pub-title">Forward-Mode Differentiation of Maxwell's Equations</div>
+          <div class="pub-desc">Differentiating electromagnetic simulations is useful for photonic device design, optimization, and sensitivity analysis. We provide a method for computing exact derivatives of Maxwell's Equations based on forward-mode differentiation, complementing the adjoint (reverse-mode) approach.</div>
+          <div class="pub-authors"><strong>Tyler W. Hughes</strong>, Ian A.D. Williamson, Momchil Minkov, and Shanhui Fan</div>
+          <div class="pub-links">
+            <a href="https://github.com/fancompute/ceviche" target="_blank">ceviche (409 ★)</a>
+            <a href="https://arxiv.org/pdf/1908.10507.pdf" target="_blank">arXiv</a>
+            <a href="https://pubs.acs.org/doi/abs/10.1021/acsphotonics.9b01238" target="_blank">Paper</a>
           </div>
         </div>
       </div>
-    </div>
 
-
-
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/ParallelProgramming.png">
+      <div class="pub-item">
+        <div class="pub-thumb"><img src="images/switch.png" alt="Adjoint nonlinear nanophotonics"></div>
+        <div class="pub-content">
+          <div class="pub-badges">
+            <div class="pub-venue">ACS Photonics (2018)</div>
+            <span class="pub-first-author-tag">Co-First Author</span>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Parallel programming of an arbitrary feedforward photonic network</div>
-            <div class="pubd">We introduced a graph-topological approach that generalizes feedforward photonic networks. This framework presents an algorithm that enables them to be programmed efficiently to implement arbitrary linear operations on demand.</div>
-            <div class="puba">Sunil Pai, Ian AD Williamson, <b>Tyler W. Hughes</b>, Momchil Minkov, Olav Solgaard, Shanhui Fan, David AB Miller</div>
-            <div class="pubv">IEEE Journal of Selected Topics in Quantum Electronics (2020)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://ieeexplore.ieee.org/ielaam/2944/8918503/9103211-aam.pdf"target=blank>Paper</a></li>
-            </div>
+          <div class="pub-title">Adjoint Method and Inverse Design for Nonlinear Nanophotonic Devices</div>
+          <div class="pub-desc">We extend adjoint-based gradient computation to the frequency-domain analysis of nonlinear optical devices, enabling efficient large-scale inverse design with respect to many design degrees of freedom simultaneously. Demonstrated on photonic power switches.</div>
+          <div class="pub-authors"><strong>Tyler W. Hughes*</strong>, Momchil Minkov*, Ian A.D. Williamson, and Shanhui Fan</div>
+          <div class="pub-links">
+            <a href="https://pubs.acs.org/doi/10.1021/acsphotonics.8b01522" target="_blank">Paper</a>
+            <a href="https://github.com/fancompute/angler" target="_blank">angler (189 ★)</a>
           </div>
         </div>
       </div>
-    </div>
 
+      <div class="pub-section-divider">Selected Collaborations</div>
 
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/Legume.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Inverse design of photonic crystals through automatic differentiation</div>
-            <div class="pubd">We implemented the plane-wave expansion and the guided-mode expansion methods using an automatic differentiation library, and used this gradient information to optimize the dispersion of a photonic crystal waveguide and the quality factor of an ultrasmall cavity in a lithium niobate slab.</div>
-            <div class="puba">Momchil Minkov, Ian AD Williamson, Lucio C Andreani, Dario Gerace, Beicheng Lou, Alex Y Song, <b>Tyler W. Hughes</b>, Shanhui Fan</div>            
-            <div class="pubv">ACS Photonics (2020)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acsphotonics.0c00327"target=blank>Paper</a></li>
-                <li><a href="https://arxiv.org/pdf/2003.00379"target=blank>arXiv</a></li>                
-            </div>
+      <div class="pub-item">
+        <div class="pub-thumb"><img src="images/ExperimentalBackprop.png" alt="Experimental Backprop"></div>
+        <div class="pub-content">
+          <div class="pub-badges"><div class="pub-venue">Science (2023)</div></div>
+          <div class="pub-title">Experimentally realized in situ backpropagation for deep learning in photonic neural networks</div>
+          <div class="pub-desc">Experimental confirmation of the in-situ optical backpropagation method I introduced theoretically in 2018. Collaborators built an integrated optical circuit implementing a photonic neural network and measured gradients of a machine learning task using interference between optical signals.</div>
+          <div class="pub-authors">Sunil Pai, Zhanghao Sun, <strong>Tyler W. Hughes</strong>, Taewon Park, Ben Bartlett, Ian AD Williamson, Momchil Minkov, Maziyar Milanizadeh, Nathnael Abebe, Francesco Morichetti, Andrea Melloni, Shanhui Fan, Olav Solgaard, David AB Miller</div>
+          <div class="pub-links">
+            <a href="https://www.science.org/doi/abs/10.1126/science.ade8450" target="_blank">Paper</a>
+            <a href="https://arxiv.org/pdf/2205.08501.pdf" target="_blank">arXiv</a>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/ExperimentalActivation.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Experimental realization of arbitrary activation functions for optical neural networks</div>
-            <div class="pubd">We experimentally demonstrated an on-chip electro-optic circuit for realizing arbitrary nonlinear activation functions for optical neural networks (ONNs). The circuit operates by converting a small portion of the input optical signal into an electrical signal and modulating the intensity of the remaining optical signal. </div>
-            <div class="puba">Monireh Moayedi Pour Fard, Ian AD Williamson, Matthew Edwards, Ke Liu, Sunil Pai, Ben Bartlett, Momchil Minkov, <b>Tyler W. Hughes</b>, Shanhui Fan, Thien-An Nguyen</div>
-            <div class="pubv">Optics Express (2020)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-8-12138"target=blank>Paper</a></li>
-            </div>
+      <div class="pub-item">
+        <div class="pub-thumb"><img src="images/Anderson.png" alt="Anderson localization"></div>
+        <div class="pub-content">
+          <div class="pub-badges"><div class="pub-venue">Nature Physics (2023)</div></div>
+          <div class="pub-title">Anderson localization of electromagnetic waves in three dimensions</div>
+          <div class="pub-desc">In this work, we used our electromagnetic simulator to observe direct evidence of Anderson localization in 3D optical systems for the first time, settling a long-standing debate in the physics community. This work required thousands of simulations of light scattering in extremely large ensembles of random spheres to gather statistics to back up these claims.</div>
+          <div class="pub-authors">Alexey Yamilov, Sergey E Skipetrov, <strong>Tyler W. Hughes</strong>, Momchil Minkov, Zongfu Yu, Hui Cao</div>
+          <div class="pub-links">
+            <a href="https://www.nature.com/articles/s41567-023-02091-7" target="_blank">Paper</a>
+            <a href="https://arxiv.org/pdf/2203.02842.pdf" target="_blank">arXiv</a>
           </div>
         </div>
       </div>
-    </div>
 
+    </div><!-- end pub-list -->
 
-
-
-
-
-
-
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/FMD.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Forward-Mode Differentiation of Maxwell's Equations</div>
-            <div class="pubd">Differentiating electromagnetic simulations is useful for photonic device design, optimization, and sensitivity analysis.  In this paper we provide a method for computing exact derivatives of Maxwell's Equations based on 'forward-mode differentiation', which should find use in several applications. </div>
-            <div class="puba"><b>Tyler W. Hughes</b>, Ian A.D. Williamson, Momchil Minkov, and Shanhui Fan</div>
-            <div class="pubv">ACS Photonics (2019)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://github.com/fancompute/ceviche"target=blank>software package</a></li>
-                <li><a href="https://arxiv.org/pdf/1908.10507.pdf"target=blank>arXiv</a></li>
-                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acsphotonics.9b01238"target=blank>Paper</a></li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/RNN.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Wave Physics as an Analog Recurrent Neural Network</div>
-            <div class="pubd">We show that wave-based systems, describing many physical phenomena, map to the mathematics of recurrent neural networks.  Using this correspondence, we show that one can train wave systems to passively perform machine learning tasks on sequential data, such as raw audio or optical signals, using simple propagation of waves through a structure. </div>
-            <div class="puba"><b>Tyler W. Hughes*</b>, Ian A.D. Williamson*, Momchil Minkov, and Shanhui Fan</div>
-            <div class="pubv">Science Advances (2019)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://github.com/fancompute/wavetorch"target=blank>software package</a></li>
-                <li><a href="https://arxiv.org/pdf/1904.12831.pdf"target=blank>arXiv</a></li>
-                <li><a href="https://advances.sciencemag.org/content/5/12/eaay6946"target=blank>Paper</a></li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/EO.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Reprogrammable Electro-Optic Nonlinear Activation Functions for Optical Neural Networks</div>
-            <div class="pubd">A major challenge to optical neural networks is the lack of a simple scheme for optical nonlinearities.  In this work, we propose the use of a hybrid electro-optic circuit, which enables nonlinear activation functions at low optical power.  We wrote an open-source optical neural network simulator and demonstrate that this class of activation function performs well on standard machine learning problems. </div>
-            <div class="puba">Ian A.D. Williamson, <b>Tyler W. Hughes</b>, Momchil Minkov, Ben Bartlett, Sunil Pai, and Shanhui Fan</div>
-            <div class="pubv">IEEE Journal of Selected Topics in Quantum Electronics (Invited Paper, 2019)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://github.com/fancompute/neuroptica"target=blank>software package</a></li>
-                <li><a href="https://arxiv.org/pdf/1903.04579.pdf"target=blank>arXiv</a></li>
-                <li><a href="https://ieeexplore.ieee.org/document/8769881"target=blank>Paper</a></li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/MZI.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Reconfigurable Photonic Circuit for Controlled Power Delivery to Laser-Driven Accelerators on a Chip</div>
-            <div class="pubd">We present a system for automatic control of the laser power to an accelerator on a chip.  Our scheme uses a mesh of Mach-Zehnder interferometers on chip, which may be sequentially and efficiently tuned to optimize power distribution in the circuit.  This provides a long-term strategy for extended energy gain from these accelerators and novel applications. </div>
-            <div class="puba"><b>Tyler W. Hughes</b>, R. Joel England, and Shanhui Fan</div>
-            <div class="pubv">Physical Review Applied (2019)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://github.com/twhughes/Accelerator-Control"target=blank>software package</a></li>
-                <li><a href="https://arxiv.org/pdf/1902.09731.pdf"target=blank>arXiv</a></li>
-                <li><a href="https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.11.064014">Paper</a></li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/switch.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Adjoint Method and Inverse Design for Nonlinear Nanophotonic Devices.</div>
-            <div class="pubd">Adjoint methods are used to compute gradients of optical device performance with respect to several design degrees of freedom, allowing for efficient large-scale inverse design and optimization of novel devices.  Here we extend this formalism to the frequency-domain analysis of nonlinear optical devices.  We use our method to design photonic power switches and provide an open source software package for inverse design. </div>
-            <div class="puba"><b>Tyler W. Hughes*</b>, Momchil Minkov*, Ian A.D. Williamson, and Shanhui Fan</div>
-            <div class="pubv">ACS Photonics (2018)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://pubs.acs.org/doi/10.1021/acsphotonics.8b01522"target=blank>Paper</a></li>
-                <li><a href="https://github.com/fancompute/angler"target=blank>software package</a></li>
-                <li><a href="https://arxiv.org/list/physics.optics/recent"target=blank>arXiv</a></li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/ANN4.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Training of Photonic Neural Networks through In-Situ Backpropagation and Gradient Measurement.</div>
-            <div class="pubd">We show how to efficiently train artificial neural networks implemented with integrated photonic circuits.  To accomplish this, we introduce a novel method for measuring the adjoint sensitivity directly as an intensity measurement in a general photonic device.  This method allows one to physically implement the 'backpropagation algorithm' using optical signals.</div>
-            <div class="puba"><b>Tyler W. Hughes</b>, Momchil Minkov, Yu Shi, and Shanhui Fan</div>
-            <div class="pubv">Optica (2018)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-5-7-864"target=blank>Paper</a></li>
-                <li><a href="https://www.osa.org/en-us/about_osa/newsroom/news_releases/2018/researchers_move_closer_to_completely_optical_arti/"target=blank>News Release</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/OnChip.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">On-Chip Laser Power Delivery System for Dielectric Laser Accelerators</div>
-            <div class="pubd">We propose an integrated system, based on dielectric waveguides, for driving particle accelerators on a chip.  This is a promising way to scale this technology to larger lengths and higher energy gains, enabling practical applications.</div>
-            <div class="puba"><b>Tyler W. Hughes</b>, Si Tan, Zhexin Zhao, Neil V. Sapra, YunJo Lee, Kenneth J. Leedle, Huiyang Deng, Yu Miao, Dylan S. Black, Olav Solgaard, James S. Harris, Minghao Qi, Jelena Vuckovic, R. Joel England, Robert L. Byer, and Shanhui Fan</div>
-            <div class="pubv">Physical Review Applied (2018)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.9.054017" target=blank>Paper</a></li>
-                <li><a href="https://arxiv.org/pdf/1709.04441.pdf"target=blank>arXiv</a></li>
-                <li><a href="https://github.com/twhughes/DLA-Laser-Coupling-Simulation-Software"target=blank>Code (Github)</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/DLAAdjoint.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Method for Computationally Efficient Design of Dielectric Laser Accelerator Structures.</div>
-            <div class="pubd">We show how to systematically inverse design a dielectric accelerator structure using the 'adjoint method'.  Here the goal is to create a standing wave pattern that maximizes the energy gain achieved by a charged particle moving through the structure.  Using this formalism, we show that there is an equivalence between maximizing energy gain and maximizing the electron radiation.</div>
-            <div class="puba"><b>Tyler W. Hughes</b>, Georgios Veronis, Kent Wootton, R. Joel England, and Shanhui Fan</div>
-            <div class="pubv">Optics Express (2017)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-13-15414"target=blank>Paper (open access)</a></li>
-                <li><a href="https://github.com/twhughes/DLA-Structure-Optimization" target=blank>Code (Github)</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/plasmonic.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Plasmonic Circuit Theory for Multiresonant Light Funneling to a Single Spatial Location</div>
-            <div class="pubd">By modeling metallic nanostructures as simple electronic circuits, we show how one may systematically design them to focus light at the same position for multiple, independently tunable frequencies.  We present a multi-layered plasmonic structure that accomplishes high field enhancement for four frequencies using light funneling between metal-insulator-metal gap modes.  This structure has potential applications in the study of biological molecules and spectroscopy.</div>
-            <div class="puba"><b>Tyler W. Hughes</b> and Shanhui Fan</div>
-            <div class="pubv">Nano Letters (2016)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.6b02474" target=blank>Paper</a></li>
-                <li><a href="https://web.stanford.edu/group/fan/publication/Hughes_NanoLetters_16_5764_2016.pdf" target=blank>PDF</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/SolarCell.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Non-Destructive Wafer Recycling for Low-Cost Thin-Film Flexible Optoelectronics</div>
-            <div class="pubd">III-V materials, such as GaAs, have great opto-electronic properties, which makes them ideal choices for solar cells, LEDs and other devices.  However, their extremely high cost limits their use in practice.  In this work, we demonstrated a method for fabricating thin-film III-V devices by lifting off the thin-film active region and subsequently reusing the expensive substrate, leading to a dramatic reduction in their potential cost.</div>
-            <div class="puba">Kyusang Lee, Jeramy D. Zimmerman, <b>Tyler W. Hughes</b>, and Stephen R. Forrest </div>
-            <div class="pubv">Advanced Functional Materials (2014)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/adfm.201400453" target=blank>Paper</a></li>                <li><a href="https://deepblue.lib.umich.edu/bitstream/handle/2027.42/108039/adfm201400453.pdf?sequence=1&isAllowed=y" target=blank>PDF</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="showmore" id="showmorepubs">
-    show more
-    </div>
+    <button class="show-more-btn" id="showmorepubs">Show more</button>
 
     <div id="morepubs">
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/ActiveAdjoint.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Adjoint-Based Optimization of Active Nanophotonic Devices</div>
-            <div class="pubd">We show how the adjoint method may be used to inverse design periodically modulated optical devices.  Our approach is based upon the multi-frequency finite-difference frequency-domain method (<a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-3-11-1256" target=blank>link</a>).  As a demonstration, we numerically design and optimize a compact optical isolator.</div>
-            <div class="puba">Jiahui Wang, Yu Shi, <b>Tyler W. Hughes</b>, Zhexin Zhao, and Shanhui Fan</div>
-            <div class="pubv">Optics Express (2018)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-26-3-3236" target=blank>Paper (open access)</a></li>
-              </ul>
+      <div class="pub-list" style="margin-top: 32px;">
+
+        <div class="pub-section-divider">More First-Author</div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/Metalens.png" alt="Metalens simulation"></div>
+          <div class="pub-content">
+            <div class="pub-badges">
+              <div class="pub-venue">Applied Physics Letters (2021)</div>
+              <span class="pub-first-author-tag">First Author</span>
+            </div>
+            <div class="pub-title">A perspective on the pathway toward full wave simulation of large area metalenses</div>
+            <div class="pub-desc">We used Tidy3D to demonstrate full-wave simulation of a metalens with a diameter of hundreds of wavelengths. We argue that brute-force full-accuracy simulation provides a viable and increasingly practical pathway toward metalens design.</div>
+            <div class="pub-authors"><strong>Tyler W. Hughes</strong>, Momchil Minkov, Victor Liu, Zongfu Yu, Shanhui Fan</div>
+            <div class="pub-links">
+              <a href="https://pubs.aip.org/aip/apl/article/119/15/150502/40471" target="_blank">Paper</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/Wootton.png" height=280px>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Towards a Fully Integrated Accelerator on a Chip: Dielectric Laser Acceleration (DLA) From the Source to Relativistic Electrons</div>
-            <div class="pubd">We discuss steps towards building a fully functional laser-driven particle accelerator on a chip, including a systematic overview of all necessary components and recent advances.</div>
-            <div class="puba">Kent Wootton, ... , <b>Tyler W. Hughes</b>, et al.</div>
-            <div class="pubv">International Particle Accelerator Conference (2017)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://portal.slac.stanford.edu/sites/ard_public/aard/dla/DLAE163%20Publications/IPAC17_wootton.pdf" target=blank>PDF</a></li>
-              </ul>
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/MZI.png" alt="Reconfigurable photonic circuit accelerator"></div>
+          <div class="pub-content">
+            <div class="pub-badges">
+              <div class="pub-venue">Physical Review Applied (2019)</div>
+              <span class="pub-first-author-tag">First Author</span>
+            </div>
+            <div class="pub-title">Reconfigurable Photonic Circuit for Controlled Power Delivery to Laser-Driven Accelerators on a Chip</div>
+            <div class="pub-desc">We present a system for automatic control of laser power to an accelerator on a chip using a mesh of Mach-Zehnder interferometers that can be sequentially tuned to optimize power distribution.</div>
+            <div class="pub-authors"><strong>Tyler W. Hughes</strong>, R. Joel England, and Shanhui Fan</div>
+            <div class="pub-links">
+              <a href="https://github.com/twhughes/Accelerator-Control" target="_blank">Software</a>
+              <a href="https://arxiv.org/pdf/1902.09731.pdf" target="_blank">arXiv</a>
+              <a href="https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.11.064014" target="_blank">Paper</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="images/FlappingWing.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Flexible Antenna Integrated With an Epitaxial Lift-Off
-Solar Cell Array for Flapping-Wing Robots</div>
-            <div class="pubd">To demonstrate the applications of lightweight, thin film optoelectronic devices, we integrate a flying robot with thin-film, III-V photovoltaics, which are used for both power and wireless communication.</div>
-            <div class="puba">Jungsuek Oh, Kyusang Lee, <b>Tyler W. Hughes</b>, Stephen Forrest, and Kamal Sarabandi</div>
-            <div class="pubv">IEEE Transactions on Antennas and Propagation (2014)</div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://ieeexplore.ieee.org/abstract/document/6813605/?reload=true" target=blank>Paper</a></li>
-              </ul>
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/OnChip.png" alt="On-chip laser power delivery"></div>
+          <div class="pub-content">
+            <div class="pub-badges">
+              <div class="pub-venue">Physical Review Applied (2018)</div>
+              <span class="pub-first-author-tag">First Author</span>
+            </div>
+            <div class="pub-title">On-Chip Laser Power Delivery System for Dielectric Laser Accelerators</div>
+            <div class="pub-desc">We propose an integrated dielectric waveguide system for driving particle accelerators on a chip, providing a scalable path to larger energy gains and enabling practical applications of on-chip acceleration.</div>
+            <div class="pub-authors"><strong>Tyler W. Hughes</strong>, Si Tan, Zhexin Zhao, Neil V. Sapra, YunJo Lee, Kenneth J. Leedle, Huiyang Deng, Yu Miao, Dylan S. Black, Olav Solgaard, James S. Harris, Minghao Qi, Jelena Vuckovic, R. Joel England, Robert L. Byer, and Shanhui Fan</div>
+            <div class="pub-links">
+              <a href="https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.9.054017" target="_blank">Paper</a>
+              <a href="https://arxiv.org/pdf/1709.04441.pdf" target="_blank">arXiv</a>
+              <a href="https://github.com/twhughes/DLA-Laser-Coupling-Simulation-Software" target="_blank">Code</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-  </div>
-</div>
-
-<hr class="soft">
-
-<!------------------------------ PROJECTS ------------------------------>
-
-<div class="container">
-  <h2>Side Projects</h2>
-
-  <div class="row">
-
-    <div class="col-md-4">
-      <div class="pp">
-        <a href="https://github.com/twhughes/Symbolic-Regression" target=blank>
-          <img src="images/LSTM_tree.png" class="imgb">
-        </a>
-        <div class="ppt">Symbolic Regression</div>
-        <div class="ppd">
-        An approach to predicting the equation underlying a set of data points using deep learning.  Our method uses a CNN to encode the dataset into a feature vector.  Then we use an LSTM network to decode a binary tree representing the predicted equation.
-        </div>
-    <div class="publ">
-              <ul>
-                <li><a href="pdfs/cs221_final.pdf" target=blank>Paper</a></li>
-        <li><a href="https://github.com/twhughes/Symbolic-Regression" target=blank>Code (Github)</a></li>
-              </ul>
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/DLAAdjoint.png" alt="Dielectric laser accelerator design"></div>
+          <div class="pub-content">
+            <div class="pub-badges">
+              <div class="pub-venue">Optics Express (2017)</div>
+              <span class="pub-first-author-tag">First Author</span>
             </div>
-      </div>
-    </div>
-
-
-       <div class="col-md-4">
-      <div class="pp">
-        <a href="https://pdfs.semanticscholar.org/c056/82e5aa5a20c6ecb463119bd73a55ccfc8197.pdf" target=blank>
-        <img src="images/reinforcement_learning.png" class="imgb">
-        </a>
-        <div class="ppt">Reinforcement Learning for Photonics</div>
-        <div class="ppd">
-        Used a Markov Decision Process to optimize and design multi-layered photonic devices for tailored reflection response.  Modeled optimization procedure as a reinforcement learning problem. Final project for Stanford CS229 (Machine Learning).
-        </div>
-    <div class="publ">
-      <ul>
-    <li><a href="https://pdfs.semanticscholar.org/c056/82e5aa5a20c6ecb463119bd73a55ccfc8197.pdf" target=blank>Writeup</a></li>
-      </ul>
-      </div>
-      </div>
-    </div>
-
-
-      <div class="col-md-4">
-        <div class="pp">
-          <a href="https://github.com/twhughes/Faraday-FDFD" target=blank>
-            <img src="images/FDFD.png" class="imgb">
-          </a>
-          <div class="ppt">Photonics Simulation Software</div>
-          <div class="ppd">
-        I've written several pieces of numerical software for photonics, including the finite-difference frequency-domain (FDFD) and time-domain (FDTD) methods in a variety of programming languages.
+            <div class="pub-title">Method for Computationally Efficient Design of Dielectric Laser Accelerator Structures</div>
+            <div class="pub-desc">We show how to systematically inverse design a dielectric accelerator structure using the adjoint method, showing an equivalence between maximizing particle energy gain and maximizing electron radiation.</div>
+            <div class="pub-authors"><strong>Tyler W. Hughes</strong>, Georgios Veronis, Kent Wootton, R. Joel England, and Shanhui Fan</div>
+            <div class="pub-links">
+              <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-13-15414" target="_blank">Paper</a>
+              <a href="https://github.com/twhughes/DLA-Structure-Optimization" target="_blank">Code</a>
+            </div>
           </div>
-    <div class="publ">
-      <ul>
-        <li><a href="https://github.com/twhughes/FDFD_matlab" target=blank>FDFD (MATLAB)</a></li>
-        <li><a href="https://github.com/twhughes/Finite-Difference-Frequency-Domain" target=blank>
-        FDFD (python)</a></li>
-        <li><a href="https://github.com/twhughes/Faraday-FDFD" target=blank>FDFD (Julia)</a></li>
-        <li><a href="https://github.com/twhughes/FDTD_JS" target=blank>FDTD (js)</a></li>
-        <li><a href="https://github.com/twhughes/FDTDPy" target=blank>FDTD (python)</a></li>
-        <li><a href="https://github.com/twhughes/FDTD_MATLAB" target=blank>FDTD (MATLAB)</a></li>
-      </ul>
-     </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/plasmonic.png" alt="Plasmonic circuit theory"></div>
+          <div class="pub-content">
+            <div class="pub-badges">
+              <div class="pub-venue">Nano Letters (2016)</div>
+              <span class="pub-first-author-tag">First Author</span>
+            </div>
+            <div class="pub-title">Plasmonic Circuit Theory for Multiresonant Light Funneling to a Single Spatial Location</div>
+            <div class="pub-desc">By modeling metallic nanostructures as electronic circuits, we systematically design them to focus light at the same position for multiple independently tunable frequencies, with applications in spectroscopy and biological sensing.</div>
+            <div class="pub-authors"><strong>Tyler W. Hughes</strong> and Shanhui Fan</div>
+            <div class="pub-links">
+              <a href="https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.6b02474" target="_blank">Paper</a>
+              <a href="https://web.stanford.edu/group/fan/publication/Hughes_NanoLetters_16_5764_2016.pdf" target="_blank">PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-section-divider">More Collaborations</div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/ParallelProgramming.png" alt="Parallel programming photonic network"></div>
+          <div class="pub-content">
+            <div class="pub-badges"><div class="pub-venue">IEEE JSTQE (2020)</div></div>
+            <div class="pub-title">Parallel programming of an arbitrary feedforward photonic network</div>
+            <div class="pub-desc">We introduced a graph-topological approach that generalizes feedforward photonic networks, with an algorithm enabling efficient programming to implement arbitrary linear operations on demand.</div>
+            <div class="pub-authors">Sunil Pai, Ian AD Williamson, <strong>Tyler W. Hughes</strong>, Momchil Minkov, Olav Solgaard, Shanhui Fan, David AB Miller</div>
+            <div class="pub-links">
+              <a href="https://ieeexplore.ieee.org/ielaam/2944/8918503/9103211-aam.pdf" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/Legume.png" alt="Inverse design photonic crystals"></div>
+          <div class="pub-content">
+            <div class="pub-badges"><div class="pub-venue">ACS Photonics (2020)</div></div>
+            <div class="pub-title">Inverse design of photonic crystals through automatic differentiation</div>
+            <div class="pub-desc">We implemented guided-mode expansion using automatic differentiation and used gradient information to optimize photonic crystal dispersion and cavity quality factors.</div>
+            <div class="pub-authors">Momchil Minkov, Ian AD Williamson, Lucio C Andreani, Dario Gerace, Beicheng Lou, Alex Y Song, <strong>Tyler W. Hughes</strong>, Shanhui Fan</div>
+            <div class="pub-links">
+              <a href="https://pubs.acs.org/doi/abs/10.1021/acsphotonics.0c00327" target="_blank">Paper</a>
+              <a href="https://arxiv.org/pdf/2003.00379" target="_blank">arXiv</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/ExperimentalActivation.png" alt="Optical activation functions"></div>
+          <div class="pub-content">
+            <div class="pub-badges"><div class="pub-venue">Optics Express (2020)</div></div>
+            <div class="pub-title">Experimental realization of arbitrary activation functions for optical neural networks</div>
+            <div class="pub-desc">Experimental demonstration of an on-chip electro-optic circuit realizing arbitrary nonlinear activation functions for optical neural networks.</div>
+            <div class="pub-authors">Monireh Moayedi Pour Fard, Ian AD Williamson, Matthew Edwards, Ke Liu, Sunil Pai, Ben Bartlett, Momchil Minkov, <strong>Tyler W. Hughes</strong>, Shanhui Fan, Thien-An Nguyen</div>
+            <div class="pub-links">
+              <a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-8-12138" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/EO.png" alt="Electro-optic activation functions"></div>
+          <div class="pub-content">
+            <div class="pub-badges"><div class="pub-venue">IEEE JSTQE — Invited (2019)</div></div>
+            <div class="pub-title">Reprogrammable Electro-Optic Nonlinear Activation Functions for Optical Neural Networks</div>
+            <div class="pub-desc">We propose a hybrid electro-optic circuit enabling nonlinear activation functions at low optical power, with an open-source ONN simulator demonstrating performance on standard ML tasks.</div>
+            <div class="pub-authors">Ian A.D. Williamson, <strong>Tyler W. Hughes</strong>, Momchil Minkov, Ben Bartlett, Sunil Pai, and Shanhui Fan</div>
+            <div class="pub-links">
+              <a href="https://github.com/fancompute/neuroptica" target="_blank">Software</a>
+              <a href="https://arxiv.org/pdf/1903.04579.pdf" target="_blank">arXiv</a>
+              <a href="https://ieeexplore.ieee.org/document/8769881" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/SolarCell.png" alt="Wafer recycling solar cells"></div>
+          <div class="pub-content">
+            <div class="pub-badges"><div class="pub-venue">Advanced Functional Materials (2014)</div></div>
+            <div class="pub-title">Non-Destructive Wafer Recycling for Low-Cost Thin-Film Flexible Optoelectronics</div>
+            <div class="pub-desc">Demonstration of thin-film III-V device fabrication by lifting off the active region and reusing the substrate, dramatically reducing cost for high-performance photovoltaics.</div>
+            <div class="pub-authors">Kyusang Lee, Jeramy D. Zimmerman, <strong>Tyler W. Hughes</strong>, and Stephen R. Forrest</div>
+            <div class="pub-links">
+              <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/adfm.201400453" target="_blank">Paper</a>
+              <a href="https://deepblue.lib.umich.edu/bitstream/handle/2027.42/108039/adfm201400453.pdf?sequence=1&isAllowed=y" target="_blank">PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-section-divider">Additional Collaborations</div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/ActiveAdjoint.png" alt="Active nanophotonic adjoint"></div>
+          <div class="pub-content">
+            <div class="pub-badges"><div class="pub-venue">Optics Express (2018)</div></div>
+            <div class="pub-title">Adjoint-Based Optimization of Active Nanophotonic Devices</div>
+            <div class="pub-desc">We show how the adjoint method may be used to inverse design periodically modulated optical devices. Our approach is based upon the multi-frequency finite-difference frequency-domain method. As a demonstration, we numerically design and optimize a compact optical isolator.</div>
+            <div class="pub-authors">Jiahui Wang, Yu Shi, <strong>Tyler W. Hughes</strong>, Zhexin Zhao, and Shanhui Fan</div>
+            <div class="pub-links">
+              <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-26-3-3236" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/Wootton.png" alt="Integrated accelerator chip"></div>
+          <div class="pub-content">
+            <div class="pub-badges"><div class="pub-venue">IPAC (2017)</div></div>
+            <div class="pub-title">Towards a Fully Integrated Accelerator on a Chip: Dielectric Laser Acceleration (DLA) From the Source to Relativistic Electrons</div>
+            <div class="pub-desc">We discuss steps towards building a fully functional laser-driven particle accelerator on a chip, including a systematic overview of all necessary components and recent advances.</div>
+            <div class="pub-authors">Kent Wootton, ..., <strong>Tyler W. Hughes</strong>, et al.</div>
+            <div class="pub-links">
+              <a href="https://portal.slac.stanford.edu/sites/ard_public/aard/dla/DLAE163%20Publications/IPAC17_wootton.pdf" target="_blank">PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb"><img src="images/FlappingWing.png" alt="Flapping wing robot solar"></div>
+          <div class="pub-content">
+            <div class="pub-badges"><div class="pub-venue">IEEE TAP (2014)</div></div>
+            <div class="pub-title">Flexible Antenna Integrated With an Epitaxial Lift-Off Solar Cell Array for Flapping-Wing Robots</div>
+            <div class="pub-desc">To demonstrate the applications of lightweight, thin film optoelectronic devices, we integrate a flying robot with thin-film, III-V photovoltaics, which are used for both power and wireless communication.</div>
+            <div class="pub-authors">Jungsuek Oh, Kyusang Lee, <strong>Tyler W. Hughes</strong>, Stephen Forrest, and Kamal Sarabandi</div>
+            <div class="pub-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/6813605/?reload=true" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- end #morepubs -->
+
+  </div>
+</section>
+
+<!-- ==================== TALKS ==================== -->
+<section class="section" id="talks">
+  <div class="section-inner">
+    <div class="section-label">Invited Talks</div>
+    <div class="talks-list">
+
+      <div class="talk-item">
+        <div class="talk-meta">
+          <span class="talk-venue">Frontiers in Optics (2025)</span>
+          <span class="talk-badge">Visionary Speaker</span>
+        </div>
+        <div class="talk-title">Building the future of photonic design with machine learning</div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta">
+          <span class="talk-venue">UW Madison Computing in Engineering Forum (2022)</span>
+        </div>
+        <div class="talk-title">Hardware-accelerated FDTD for large-scale electrodynamics</div>
+      </div>
+
+      <div class="talk-item">
+        <div class="talk-meta">
+          <span class="talk-venue">CLEO (2019)</span>
+          <span class="talk-badge">Invited</span>
+        </div>
+        <div class="talk-title">Training of photonic neural networks through in situ backpropagation</div>
+      </div>
+
     </div>
   </div>
+</section>
 
-</div>
-  <div class="showmore" id="showmoreprojects">
-    show more
+<!-- ==================== PATENTS ==================== -->
+<section class="section" id="patents">
+  <div class="section-inner">
+    <div class="section-label">Patents</div>
+    <div class="patents-list">
+
+      <div class="patent-item">
+        <span class="patent-year">2023</span>
+        <span class="patent-title">Efficient Analog Backpropagation Training Architecture for Photonic Neural Networks</span>
+      </div>
+
+      <div class="patent-item">
+        <span class="patent-year">2022</span>
+        <span class="patent-title">Simultaneous Measurements of Gradients in Optical Networks</span>
+      </div>
+
+      <div class="patent-item">
+        <span class="patent-year">2022</span>
+        <span class="patent-title">Training Wave-Based Physical Systems as Recurrent Neural Networks</span>
+      </div>
+
+      <div class="patent-item">
+        <span class="patent-year">2022</span>
+        <span class="patent-title">Systems and Methods for Activation Functions for Photonic Neural Networks</span>
+      </div>
+
+      <div class="patent-item">
+        <span class="patent-year">2021</span>
+        <span class="patent-title">Training of Photonic Neural Networks Through In Situ Backpropagation</span>
+      </div>
+
+    </div>
   </div>
-  <div id="moreprojects">
-  <div class="row">
+</section>
 
-    <div class="col-md-3">
-      <div class="pp">
-        <a href="https://github.com/twhughes/Trajectory-Prediction" target=blank>
-        <img src="images/trajectory_tracking.png" class="imgsm">
-        </a>
-        <div class="ppt">Trajectory Tracking</div>
-        <div class="ppd">
-        Trained LSTM to predict trajectories of pedestrians in a busy space.  Incorporated labeled scene images and information about other pedestrians.  Final project for Stanford CS230 (Deep Learning).
+<!-- ==================== OPEN SOURCE ==================== -->
+<section class="section" id="oss">
+  <div class="section-inner">
+    <div class="section-label">Open Source</div>
+    <div class="oss-list">
+
+      <div class="pub-section-divider">Author</div>
+
+      <div class="oss-item">
+        <div class="oss-meta">
+          <a class="oss-name" href="https://github.com/flexcompute/tidy3d" target="_blank">tidy3d</a>
+          <span class="oss-stars">330 ★</span>
         </div>
-    <div class="publ">
-      <ul>
-    <li><a href="https://github.com/twhughes/Trajectory-Prediction" target=blank>Code (Github)</a></li>
-      </ul>
-      </div>
-      </div>
-    </div>
-
-
-      <div class="col-md-3">
-        <div class="pp">
-          <a href="dla.html" target=blank>
-            <img src="images/DLA.png" class="imgsm">
-          </a>
-          <div class="ppt">Diffusion Limited Aggregation</div>
-          <div class="ppd">
-            Here is a JavaScript implementation of <a href="https://en.wikipedia.org/wiki/Diffusion-limited_aggregation" target=blank>diffusion limited aggregation</a> I wrote that runs in the browser.
-          </div>
-<div class="publ">
-      <ul>
-    <li><a href="dla.html">Run</a></li>
-    <li><a href="https://github.com/twhughes/DLA " target=blank>Code (Github)</a></li>
-      </ul>
-      </div>
-        </div>
+        <div class="oss-desc">GPU-accelerated 3D Maxwell's equations solver with a Python client, cloud execution, and full automatic differentiation support for gradient-based inverse design.</div>
       </div>
 
+      <div class="oss-item">
+        <div class="oss-meta">
+          <a class="oss-name" href="https://github.com/fancompute/ceviche" target="_blank">ceviche</a>
+          <span class="oss-stars">409 ★</span>
+        </div>
+        <div class="oss-desc">Differentiable frequency-domain electromagnetic simulation (FDFD). Computes exact gradients of Maxwell's equations via forward- and reverse-mode autodiff, compatible with JAX and autograd.</div>
+      </div>
 
-      <div class="col-md-3">
-        <div class="pp">
-          <a href="https://github.com/twhughes/Kombucha-Analytics" target=blank>
-            <img src="images/kombucha.png" class="imgsm">
-          </a>
-          <div class="ppt">Kombucha Analytics</div>
-          <div class="ppd">
-            A few years ago, a friend and I started working on a Django app that allows people to keep track of their kombucha recipes.  Eventually, we would like to include the ability for users to share and perform data analytics on the recipes.
-          </div>
-<div class="publ">
-      <ul>
-    <li><a href="https://github.com/twhughes/Kombucha-Analytics" target=blank>Code (Github)</a></li>
-      </ul>
-      </div>
+      <div class="oss-item">
+        <div class="oss-meta">
+          <a class="oss-name" href="https://github.com/fancompute/angler" target="_blank">angler</a>
+          <span class="oss-stars">189 ★</span>
         </div>
+        <div class="oss-desc">Adjoint-based inverse design tool for nonlinear nanophotonic devices. Extends the adjoint method to frequency-domain nonlinear optics for gradient-based optimization of photonic structures.</div>
       </div>
-</div>
-<!---
-      <div class="col-md-3">
-      <div class="pp">
-        <a href="http://bit.ly/scholaroctopus">
-          <img src="img/scholaroctopus.jpg" class="imgsm">
-        </a>
-        <div class="ppt">ScholarOctopus</div>
-        <div class="ppd">
-          ScholarOctopus takes ~7000 papers from 34 ML/CV conferences (CVPR / NIPS / ICML / ICCV / ECCV / ICLR / BMVC) between 2006 and 2014 and visualizes them with t-SNE based on bigram tfidf vectors. In general, it should be much easier than it currently is to explore the academic literature, find related papers, etc. This hack is a small step in that direction at least for my bubble of related research.
-        </div>
-      </div>
-    </div>
 
-      <div class="col-md-3">
-        <div class="pp">
-          <a href="http://cs.stanford.edu/people/karpathy/evenmore.html">
-            <img src="img/circle.svg" class="imgsm">
-          </a>
-          <div class="ppt">even more</div>
-          <div class="ppd">
-            Even more various crappy projects I've worked on long time ago.
-          </div>
+      <div class="oss-item">
+        <div class="oss-meta">
+          <a class="oss-name" href="https://github.com/fancompute/wavetorch" target="_blank">wavetorch</a>
+          <span class="oss-stars">541 ★</span>
         </div>
+        <div class="oss-desc">Wave-based analog recurrent neural network simulator and trainer. Implements the wave physics / RNN correspondence, enabling physical systems to be trained on sequential data tasks.</div>
       </div>
-    </div>
 
+      <div class="oss-item">
+        <div class="oss-meta">
+          <a class="oss-name" href="https://github.com/fancompute/neuroptica" target="_blank">neuroptica</a>
+          <span class="oss-stars">269 ★</span>
+        </div>
+        <div class="oss-desc">Simulation framework for optical neural network hardware. Models physical imperfections in integrated photonic circuits and supports training with realistic device constraints.</div>
+      </div>
 
-    <div class="row">
-      <div class="col-md-3">
-        <div class="pp">
-          <a href="http://cs.stanford.edu/~karpathy/tsnejs/">
-            <img src="img/tsnejslogo.jpg" class="imgsm">
-          </a>
-          <div class="ppt">tsnejs</div>
-          <div class="ppd">
-          tsnejs is a t-SNE visualization algorithm implementation in Javascript. I also computed an embedding for ImageNet validation images <a href="http://cs.stanford.edu/people/karpathy/cnnembed/">here</a>. Pretty! You can also use tsnejs to embed (almost) arbitrary CSV data in this <a href="http://cs.stanford.edu/people/karpathy/tsnejs/csvdemo.html">web interface</a>.
-          </div>
+      <div class="pub-section-divider">Contributor</div>
+
+      <div class="oss-item">
+        <div class="oss-meta">
+          <a class="oss-name" href="https://github.com/RasaHQ/rasa" target="_blank">rasa</a>
+          <span class="oss-stars">21,123 ★</span>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="pp">
-          <a href="http://badmephisto.com/iphone/">
-            <img src="img/iphonepad.jpg" class="imgsm">
-          </a>
-          <div class="ppt">iOS apps</div>
-          <div class="ppd">
-            I've written an <a href="http://badmephisto.com/iphone/">iOS app</a> that helps people access and remember Rubik's Cube algorithms. I've later also ported it to Android. There's also my little humble 2-4 player iPad game called <a href="http://itunes.apple.com/us/app/loud-snakes/id523479541?mt=8">Loud Snakes</a> :)
-        </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="pp">
-          <a href="http://cs.stanford.edu/people/karpathy/glass/">
-            <img src="img/glass.jpg" class="imgsm">
-          </a>
-          <div class="ppt">Glass Winners</div>
-          <div class="ppd">
-            This page was a fun hack. Google was inviting people to become Glass explorers through Twitter (#ifihadclass) and I set out to document the winners of the mysterious process for fun. I didn't expect that it would go on to explode on internet and get me mentions in <a href="http://techcrunch.com/2013/03/31/glass-explorer-apps/">TechCrunch</a>, Verge, and many other places.
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="pp">
-          <a href="https://www.youtube.com/watch?v=mSaO0Ul_55c">
-            <img src="img/tetris.jpg" class="imgsm">
-          </a>
-          <div class="ppt">Tetris AI</div>
-          <div class="ppd">
-            I think I enjoy writing AIs for games more than I like playing games myself - Over the years I wrote several for World of Warcraft, Farmville, Chess, and <a href="https://www.youtube.com/watch?v=mSaO0Ul_55c">Tetris</a>. On somewhat related note, I also wrote a super-fun <a href="http://code.google.com/p/nplayertetris/">Multiplayer Co-op Tetris</a>.
-          </div>
-        </div>
+        <div class="oss-desc">Open-source conversational AI framework for building NLU and dialogue systems. Implemented lookup table matching for named-entity recognition during internship (2018).</div>
       </div>
 
     </div>
-
--->
-</div>
-  <hr class="soft">
-  <div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
-
-  <h2>Courses taken (S = Stanford, M = Michigan)</h2>
-  <div class="row">
-      <div class="column">
-        <p>  <b>Machine Learning / Statistics:</b>
-        <ul>
-          <li>(S) CS 229  Machine Learning </li>
-          <li>(S) CS 221  Artificial Intelligence</li>
-          <li>(S) CS 230  Deep Learning</li>
-              <li>(S) CS 20  TensorFlow for Deep Learning Research</li>
-        </ul>
-       </p>
-       <br>
-          <p>  <b>Computer Science :</b>
-      <ul>
-          <li>(S) CS 106B Programming Abstractions </li>
-          <li>(S) CS 107  Computer Organization & Systems</li>
-          <li>(S) CS 42  Contemporary JavaScript</li>
-      </ul>
-         </p>
-         <br>
-          <p>  <b>Numerical Methods / Mathematics:</b>
-      <ul>
-          <li>(S) EE 263 Linear Dynamical Systems </li>
-          <li>(S) EE 261  Fourier Transform & Applications</li>
-          <li>(M) PHYSICS 211 Computational Physics</li>
-      </ul>
-         </p>
-     </div>
-      <div class="column">
-
-          <p>  <b>Photonics:</b>
-      <ul>
-          <li>(S) EE 234 Photonics Laboratory </li>
-          <li>(S) EE 236B Guided Waves</li>
-          <li>(M) EE 336 Nanophotonics</li>
-      </ul>
-         </p>
-         <br>
-          <p>  <b>Nonlinear Dynamics / Complexity:</b>
-      <ul>
-          <li>(M) PHYS 413 Nonlinear Dynamics & Chaos </li>
-          <li>(S) CMPLXSYS 511  Theory of Complex Systems</li>
-          <li>(M) CMPLXSYS 535 Theory of Social and Technological Networks</li>
-      </ul>
-         </p>
-         <br>
-         <p> <b>Physics:</b>
-      <ul>
-          <li>Quantum Mechanics (through quantum field theory I) </li>
-          <li>Electricity and Magnetism (through graduate level)</li>
-          <li>Classical Mechanics (through graduate level)</li>
-          <li>Statistical Mechanics (through graduate level)</li>
-          <li>(S) PHYS 211 Continuum Mechanics</li>
-
-      </ul>
-         </p>
-     </div>
   </div>
-</div>
-</div>
+</section>
 
-<!-- place js at end for faster loading -->
-<script src="jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<!-- ==================== COURSES ==================== -->
+<section class="section" id="courses">
+  <div class="section-inner">
+    <div class="section-label">Selected Coursework</div>
+    <div class="courses-grid">
+
+      <div>
+        <div class="course-category">
+          <div class="course-cat-title">Machine Learning &amp; AI <span class="course-school">Stanford</span></div>
+          <ul class="course-list">
+            <li>CS 229 — Machine Learning</li>
+            <li>CS 221 — Artificial Intelligence</li>
+            <li>CS 230 — Deep Learning</li>
+            <li>CS 20 — TensorFlow for Deep Learning Research</li>
+          </ul>
+        </div>
+        <div class="course-category">
+          <div class="course-cat-title">Mathematics &amp; Systems <span class="course-school">Stanford</span></div>
+          <ul class="course-list">
+            <li>EE 263 — Linear Dynamical Systems</li>
+            <li>EE 261 — Fourier Transform &amp; Applications</li>
+            <li>CS 107 — Computer Organization &amp; Systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="course-category">
+          <div class="course-cat-title">Physics <span class="course-school">Michigan · Stanford</span></div>
+          <ul class="course-list">
+            <li>Quantum Mechanics (through quantum field theory I)</li>
+            <li>Electricity &amp; Magnetism (graduate level)</li>
+            <li>Classical &amp; Statistical Mechanics (graduate level)</li>
+          </ul>
+        </div>
+        <div class="course-category">
+          <div class="course-cat-title">Complexity &amp; Dynamics <span class="course-school">Michigan</span></div>
+          <ul class="course-list">
+            <li>CMPLXSYS 511 — Theory of Complex Systems</li>
+            <li>PHYS 413 — Nonlinear Dynamics &amp; Chaos</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Contact</div>
+    <p class="contact-blurb">Open to research conversations and opportunities — feel free to reach out.</p>
+    <div class="contact-links">
+      <a class="contact-link js-email" href="#">
+        <span class="contact-link-label">Email</span>
+        <span class="contact-link-value js-email-text">—</span>
+      </a>
+      <a href="https://github.com/twhughes" target="_blank" class="contact-link">
+        <span class="contact-link-label">GitHub</span>
+        <span class="contact-link-value">@twhughes</span>
+      </a>
+      <a href="https://www.linkedin.com/in/tylerwhughes/" target="_blank" class="contact-link">
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-value">tylerwhughes</span>
+      </a>
+      <a href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en" target="_blank" class="contact-link">
+        <span class="contact-link-label">Google Scholar</span>
+        <span class="contact-link-value">Tyler W. Hughes</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 Tyler W. Hughes</p>
+</footer>
+
 <script>
+  function toggleSection(btnId, contentId) {
+    const btn = document.getElementById(btnId);
+    const content = document.getElementById(contentId);
+    let shown = false;
+    btn.addEventListener('click', function() {
+      shown = !shown;
+      content.style.display = shown ? 'block' : 'none';
+      btn.textContent = shown ? 'Show less' : 'Show more';
+    });
+  }
+  toggleSection('showmorepubs', 'morepubs');
+  toggleSection('showmoreprojects', 'moreprojects');
 
-var more_projects_shown = false;
-function start() {
-  $("#showmoreprojects").click(function() {
-    if(!more_projects_shown) {
-      $("#moreprojects").slideDown('fast', function() {
-        $("#showmoreprojects").text('hide');
-      });
-      more_projects_shown = true;
-    } else {
-      $("#moreprojects").slideUp('fast', function() {
-        $("#showmoreprojects").text('show more');
-      });
-      more_projects_shown = false;
-    }
+  // Email obfuscation — assembled at runtime to avoid scraping
+  const u = 'tylerwhughes91', d = 'gmail.com';
+  document.querySelectorAll('.js-email').forEach(el => {
+    el.href = 'mailto:' + u + '@' + d;
   });
-
-  var more_pubs_shown = false;
-  $("#showmorepubs").click(function() {
-    if(!more_pubs_shown) {
-      $("#morepubs").slideDown('fast', function() {
-        $("#showmorepubs").text('hide');
-      });
-      more_pubs_shown = true;
-    } else {
-      $("#morepubs").slideUp('fast', function() {
-        $("#showmorepubs").text('show more');
-      });
-      more_pubs_shown = false;
-    }
+  document.querySelectorAll('.js-email-text').forEach(el => {
+    el.textContent = u + '@' + d;
   });
-
-}
-
 </script>
 
 </body>
-<footer>
-  <p>© 2018 Tyler Hughes</p>
-</footer>
 </html>
