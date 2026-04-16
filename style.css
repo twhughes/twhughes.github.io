@@ -162,8 +162,16 @@ nav {
   margin-bottom: 8px;
 }
 
+.hero-tagline {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
 .hero-title {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--text-muted);
   margin-bottom: 4px;
@@ -295,6 +303,31 @@ h2.section-heading {
   color: var(--text);
   margin-bottom: 32px;
   line-height: 1.2;
+}
+
+/* ============================================================
+   RESEARCH INTERESTS
+   ============================================================ */
+.research-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 68ch;
+}
+
+.research-list li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  padding-left: 20px;
+  border-left: 2px solid var(--border-dark);
+}
+
+.research-list li strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 2px;
 }
 
 /* ============================================================

@@ -55,7 +55,6 @@
       <a href="#talks">Talks</a>
       <a href="#patents">Patents</a>
       <a href="#oss">Code</a>
-      <a href="#courses">Courses</a>
       <a href="pdfs/Resume.pdf">Resume</a>
     </div>
   </div>
@@ -67,7 +66,8 @@
     <img src="images/tyler_alt.JPG" class="hero-photo" alt="Tyler W. Hughes">
     <div class="hero-text">
       <h1 class="hero-name">Tyler W. Hughes</h1>
-      <div class="hero-title">Head of Photonics · Flexcompute Inc.</div>
+      <div class="hero-tagline">AI researcher at the boundary of machine learning and the physical sciences</div>
+      <div class="hero-title">Head of Photonics · Flexcompute Inc. · PhD, Stanford Applied Physics</div>
 <div class="hero-icons">
         <a href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en" title="Google Scholar">
           <img src="icons/gscholar.png" alt="Google Scholar" width="20" height="20">
@@ -85,11 +85,12 @@
         <a href="https://github.com/tylerflex" target="_blank">tylerflex</a>
       </div>
       <div class="hero-tags">
-        <span class="hero-tag">Differentiable Simulation</span>
-        <span class="hero-tag">Inverse Design</span>
         <span class="hero-tag">AI for Science</span>
         <span class="hero-tag">Agentic Workflows</span>
+        <span class="hero-tag">Scientific ML</span>
         <span class="hero-tag">Physics-informed ML</span>
+        <span class="hero-tag">Differentiable Simulation</span>
+        <span class="hero-tag">Inverse Design</span>
       </div>
     </div>
   </div>
@@ -101,24 +102,16 @@
       <span class="stat-num">3,777</span>
       <span class="stat-label">Citations</span>
     </a>
-    <a class="stat" href="https://scholar.google.com/citations?user=-AHhToYAAAAJ&hl=en" target="_blank">
-      <span class="stat-num">23</span>
-      <span class="stat-label">h-index</span>
-    </a>
-    <a class="stat" href="#publications">
-      <span class="stat-num">9</span>
-      <span class="stat-label">1st-author papers</span>
-    </a>
     <a class="stat" href="https://github.com/fancompute/ceviche" target="_blank">
-      <span class="stat-num">409 ★</span>
+      <span class="stat-num js-stars" data-repo="fancompute/ceviche">409 ★</span>
       <span class="stat-label">ceviche</span>
     </a>
     <a class="stat" href="https://github.com/flexcompute/tidy3d" target="_blank">
-      <span class="stat-num">330 ★</span>
+      <span class="stat-num js-stars" data-repo="flexcompute/tidy3d">330 ★</span>
       <span class="stat-label">tidy3d</span>
     </a>
     <a class="stat" href="https://github.com/fancompute/angler" target="_blank">
-      <span class="stat-num">189 ★</span>
+      <span class="stat-num js-stars" data-repo="fancompute/angler">189 ★</span>
       <span class="stat-label">angler</span>
     </a>
   </div>
@@ -135,18 +128,43 @@
         I like simulating the physical world with computers and using those simulations to design and optimize useful things. My focus is <em>differentiable simulation</em>: writing physics solvers that can compute not just what a system does, but exactly how it responds to changes, enabling gradient-based optimization over designs with enormous numbers of parameters.
       </p>
       <p>
-        I'm currently Head of Photonics at <a href="https://www.flexcompute.com/">Flexcompute Inc.</a>, where I lead a technical team building AI-driven simulation products. A major part of my focus is on the agentic entrypoints to these tools: we've built an <a href="https://docs.flexcompute.com/projects/tidy3d/en/v2.10.0/ai/flex_agent.html">MCP server</a> that exposes our electromagnetic solver to AI agents, and I'm deeply involved in shaping how that gets used to solve real photonic design and optimization problems. I'm drawn to this boundary where AI learns about and reasons over the physical world, both as a way to accelerate scientific work and as a rich domain for fundamental AI research.
+        My PhD in <a href="https://web.stanford.edu/dept/app-physics/cgi-bin/">Applied Physics</a> at Stanford (advised by <a href="https://web.stanford.edu/group/fan/">Prof. Shanhui Fan</a>) established some deep connections between physics and computation: I showed that <a href="https://advances.sciencemag.org/content/5/12/eaay6946">wave physics maps exactly to recurrent neural networks</a>, proposed and experimentally demonstrated <a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-5-7-864">backpropagation implemented in light</a> for training optical neural networks, and developed adjoint methods for electromagnetic inverse design.
       </p>
       <p>
-        Earlier at Flexcompute, I was the principal developer of <a href="https://github.com/flexcompute/tidy3d">Tidy3D</a> (330 ★ on GitHub), our open-source Python framework for cloud-based, GPU-accelerated electromagnetic simulation. I was in the weeds on everything: writing solver code, building and maintaining the Python client, and leading community and documentation efforts. My deepest technical contribution was making the entire simulation framework differentiable: users can now differentiate through a full 3D Maxwell's equations solve running on a cloud GPU cluster in a single adjoint pass, compatible with JAX and PyTorch, enabling large-scale gradient-based inverse design with hundreds of thousands of parameters.
+        I'm currently focused on the boundary where AI agents meet physical simulation. At <a href="https://www.flexcompute.com/">Flexcompute</a> I lead a technical team building AI-driven simulation products — including an <a href="https://docs.flexcompute.com/projects/tidy3d/en/v2.10.0/ai/flex_agent.html">MCP server</a> that exposes our electromagnetic solver to AI agents. I find this space compelling both as a practical accelerator for scientific work and as a domain that poses genuinely hard fundamental questions about how AI systems reason over structured, physics-constrained environments.
       </p>
       <p>
-        Before Flexcompute, I completed my PhD in <a href="https://web.stanford.edu/dept/app-physics/cgi-bin/">Applied Physics</a> at Stanford, advised by <a href="https://web.stanford.edu/group/fan/">Prof. Shanhui Fan</a>. My PhD work established some deep connections between physics and computation: I showed that <a href="https://advances.sciencemag.org/content/5/12/eaay6946">wave physics maps exactly to recurrent neural networks</a>, proposed and experimentally demonstrated <a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-5-7-864">backpropagation implemented in light</a> for training optical neural networks, and developed adjoint methods for electromagnetic inverse design.
+        Earlier at Flexcompute, I was the principal developer of <a href="https://github.com/flexcompute/tidy3d">Tidy3D</a>, our open-source Python framework for cloud-based, GPU-accelerated electromagnetic simulation. My deepest technical contribution was making the entire framework differentiable: users can now differentiate through a full 3D Maxwell's equations solve running on a cloud GPU cluster in a single adjoint pass, compatible with JAX and PyTorch, enabling gradient-based inverse design with hundreds of thousands of parameters.
       </p>
       <p>
-        I studied physics at the University of Michigan and now live in New York City. When I'm not building things I'm usually traveling, cooking, or running around Central Park. <a href="pdfs/Resume.pdf">Resume here</a>, last updated November 2025.
+        I studied physics at the University of Michigan and now live in New York City. I'm actively exploring research roles at frontier AI labs — feel free to reach out. <a href="pdfs/Resume.pdf">Resume</a>.
       </p>
     </div>
+  </div>
+</section>
+
+<!-- ==================== RESEARCH INTERESTS ==================== -->
+<section class="section" id="research">
+  <div class="section-inner">
+    <h2 class="section-label">Research Interests</h2>
+    <ul class="research-list">
+      <li>
+        <strong>Agents that reason over physical simulators.</strong>
+        What does it take for an AI system to meaningfully interface with a Maxwell solver or a fluid dynamics code? How do simulation APIs need to change to be legible to language models, and what can agents discover when they can run experiments at simulation speed?
+      </li>
+      <li>
+        <strong>Differentiable programming as a substrate for physical AI.</strong>
+        Making simulations differentiable — so you can propagate gradients through them — seems like a fundamental primitive for any system that needs to interact with or optimize over the physical world. I'm interested in how far this scales and where it breaks.
+      </li>
+      <li>
+        <strong>What physical systems reveal about computation.</strong>
+        My PhD showed that wave dynamics are mathematically equivalent to recurrent neural networks, and that you can run backpropagation in light. I think there's more to be found at this interface — physics as a source of new computational primitives and new inductive biases for learning.
+      </li>
+      <li>
+        <strong>Scientific ML that actually generalizes.</strong>
+        Neural networks that know the right physics constraints should need less data and transfer better across regimes. Understanding when and why this works — and when it doesn't — feels like an open and important question.
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -730,59 +748,11 @@
   </div>
 </section>
 
-<!-- ==================== COURSES ==================== -->
-<section class="section" id="courses">
-  <div class="section-inner">
-    <h2 class="section-label">Selected Coursework</h2>
-    <div class="courses-grid">
-
-      <div>
-        <div class="course-category">
-          <div class="course-cat-title">Machine Learning &amp; AI <span class="course-school">Stanford</span></div>
-          <ul class="course-list">
-            <li>CS 229 — Machine Learning</li>
-            <li>CS 221 — Artificial Intelligence</li>
-            <li>CS 230 — Deep Learning</li>
-            <li>CS 20 — TensorFlow for Deep Learning Research</li>
-          </ul>
-        </div>
-        <div class="course-category">
-          <div class="course-cat-title">Mathematics &amp; Systems <span class="course-school">Stanford</span></div>
-          <ul class="course-list">
-            <li>EE 263 — Linear Dynamical Systems</li>
-            <li>EE 261 — Fourier Transform &amp; Applications</li>
-            <li>CS 107 — Computer Organization &amp; Systems</li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <div class="course-category">
-          <div class="course-cat-title">Physics <span class="course-school">Michigan · Stanford</span></div>
-          <ul class="course-list">
-            <li>Quantum Mechanics (through quantum field theory I)</li>
-            <li>Electricity &amp; Magnetism (graduate level)</li>
-            <li>Classical &amp; Statistical Mechanics (graduate level)</li>
-          </ul>
-        </div>
-        <div class="course-category">
-          <div class="course-cat-title">Complexity &amp; Dynamics <span class="course-school">Michigan</span></div>
-          <ul class="course-list">
-            <li>CMPLXSYS 511 — Theory of Complex Systems</li>
-            <li>PHYS 413 — Nonlinear Dynamics &amp; Chaos</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ==================== CONTACT ==================== -->
 <section class="section" id="contact">
   <div class="section-inner">
     <h2 class="section-label">Contact</h2>
-    <p class="contact-blurb">Open to research conversations and opportunities — feel free to reach out.</p>
+    <p class="contact-blurb">Actively exploring research roles at frontier AI labs. Open to conversations — feel free to reach out.</p>
     <div class="contact-links">
       <a class="contact-link js-email" href="#">
         <span class="contact-link-label">Email</span>
@@ -826,6 +796,15 @@
     });
   }
   toggleSection('showmorepubs', 'morepubs');
+
+  // Live GitHub star counts
+  document.querySelectorAll('.js-stars').forEach(el => {
+    const repo = el.dataset.repo;
+    fetch('https://api.github.com/repos/' + repo)
+      .then(r => r.json())
+      .then(d => { if (d.stargazers_count) el.textContent = d.stargazers_count.toLocaleString() + ' ★'; })
+      .catch(() => {});
+  });
 
   // Email obfuscation — assembled at runtime to avoid scraping
   const u = 'tylerwhughes91', d = 'gmail.com';
