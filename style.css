@@ -22,7 +22,7 @@
   --radius:       6px;
   --shadow-sm:    0 1px 3px rgba(26, 23, 20, 0.06);
   --shadow:       0 4px 16px rgba(26, 23, 20, 0.10);
-  --max-w:        880px;
+  --max-w:        960px;
   --font-head:    'Fraunces', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
@@ -142,8 +142,8 @@ nav {
 
 .hero-photo {
   flex-shrink: 0;
-  width: 148px;
-  height: 148px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -203,6 +203,25 @@ nav {
   width: 17px;
   height: 17px;
   object-fit: contain;
+}
+
+.hero-icons a.hero-icon-label {
+  width: auto;
+  border-radius: 20px;
+  padding: 0 10px;
+  gap: 5px;
+}
+
+.hero-icons a.hero-icon-label span {
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.hero-icons a.hero-icon-label:hover span {
+  color: var(--accent);
 }
 
 /* ============================================================
@@ -461,7 +480,8 @@ h2.section-heading {
 .pub-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--bg-alt);
 }
 
 .pub-content {}
@@ -734,8 +754,10 @@ h2.section-heading {
 
 .writing-thumb img {
   width: 180px;
-  height: auto;
+  height: 160px;
   display: block;
+  object-fit: contain;
+  background: var(--bg-alt);
   transition: opacity 0.2s;
 }
 
