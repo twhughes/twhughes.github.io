@@ -205,7 +205,30 @@ nav {
   object-fit: contain;
 }
 
-.hero-icons a.hero-icon-label {
+.hero-github-handles {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.hero-github-handles a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.hero-github-handles a:hover {
+  color: var(--accent);
+}
+
+.hero-github-handles span {
+  color: var(--text-light);
+}
+
+.hero-icon-label {
   width: auto;
   border-radius: 20px;
   padding: 0 10px;
@@ -300,10 +323,6 @@ h2.section-heading {
   gap: 2px;
 }
 
-.stat:first-child {
-  padding-left: 0;
-}
-
 .stat:last-child {
   border-right: none;
 }
@@ -332,13 +351,19 @@ h2.section-heading {
 
 @media (max-width: 640px) {
   .stats-inner {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   .stat {
-    flex: 1 1 calc(50% - 1px);
     border-right: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    padding: 14px 16px;
+    padding: 14px 10px;
+  }
+  .stat:nth-child(3n) {
+    border-right: none;
+  }
+  .stat:nth-last-child(-n+3) {
+    border-bottom: none;
   }
 }
 
