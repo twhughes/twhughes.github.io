@@ -4,22 +4,42 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tyler W. Hughes</title>
+  <title>Tyler W. Hughes — AI for Science, Differentiable Simulation</title>
+  <meta name="description" content="Tyler W. Hughes — Head of Photonics at Flexcompute. Differentiable simulation, inverse design, AI for science, and agentic workflows for photonic design.">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tylerwhughes.com/">
+  <meta property="og:title" content="Tyler W. Hughes — AI for Science, Differentiable Simulation">
+  <meta property="og:description" content="Head of Photonics at Flexcompute. Differentiable simulation, inverse design, AI for science, and agentic workflows for photonic design.">
+  <meta property="og:image" content="https://tylerwhughes.com/images/tyler_alt.JPG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tyler W. Hughes — AI for Science, Differentiable Simulation">
+  <meta name="twitter:description" content="Head of Photonics at Flexcompute. Differentiable simulation, inverse design, AI for science, and agentic workflows for photonic design.">
+  <meta name="twitter:image" content="https://tylerwhughes.com/images/tyler_alt.JPG">
+
+  <!-- JSON-LD person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tyler W. Hughes",
+    "url": "https://tylerwhughes.com",
+    "jobTitle": "Head of Photonics",
+    "worksFor": { "@type": "Organization", "name": "Flexcompute Inc." },
+    "sameAs": [
+      "https://github.com/twhughes",
+      "https://www.linkedin.com/in/tylerwhughes/",
+      "https://scholar.google.com/citations?user=-AHhToYAAAAJ"
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="icons/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-
-  <!-- Google Analytics -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-103784586-1', 'auto');
-    ga('send', 'pageview');
-  </script>
 </head>
 
 <body>
@@ -31,10 +51,10 @@
     <div class="nav-links">
       <a href="#bio">Bio</a>
       <a href="#timeline">Timeline</a>
-      <a href="#publications">Publications</a>
+      <a href="#publications">Papers</a>
       <a href="#talks">Talks</a>
       <a href="#patents">Patents</a>
-      <a href="#oss">Open Source</a>
+      <a href="#oss">Code</a>
       <a href="#courses">Courses</a>
       <a href="pdfs/Resume.pdf">Resume</a>
     </div>
@@ -109,7 +129,7 @@
 <!-- ==================== BIO ==================== -->
 <section class="section" id="bio">
   <div class="section-inner">
-    <div class="section-label">About</div>
+    <h2 class="section-label">About</h2>
     <div class="bio-body">
       <p>
         I like simulating the physical world with computers and using those simulations to design and optimize useful things. My focus is <em>differentiable simulation</em>: writing physics solvers that can compute not just what a system does, but exactly how it responds to changes, enabling gradient-based optimization over designs with enormous numbers of parameters.
@@ -133,12 +153,12 @@
 <!-- ==================== WRITING ==================== -->
 <section class="section" id="writing">
   <div class="section-inner">
-    <div class="section-label">Writing</div>
+    <h2 class="section-label">Writing</h2>
     <div class="writing-list">
 
       <div class="writing-item">
         <a class="writing-thumb" href="https://engineering.flexcompute.com/articles/autoresearch-photonic-design/" target="_blank">
-          <img src="https://engineering.flexcompute.com/images/autoresearch/progression_gif_waveguide_crossing.gif" alt="AI agent designing photonic component">
+          <img src="images/waveguide_crossing.gif" alt="AI agent designing photonic component">
         </a>
         <div class="writing-body">
           <div class="writing-meta">
@@ -155,7 +175,7 @@
 
       <div class="writing-item">
         <a class="writing-thumb" href="https://engineering.flexcompute.com/articles/photonic-inverse-design-45-lines/" target="_blank">
-          <img src="https://engineering.flexcompute.com/images/photonic-inverse-design/evolution.gif" alt="Waveguide bend optimization evolving">
+          <img src="images/inverse_design_evolution.gif" alt="Waveguide bend optimization evolving">
         </a>
         <div class="writing-body">
           <div class="writing-meta">
@@ -177,7 +197,7 @@
 <!-- ==================== TIMELINE ==================== -->
 <section class="section" id="timeline">
   <div class="section-inner">
-    <div class="section-label">Timeline</div>
+    <h2 class="section-label">Timeline</h2>
     <div class="timeline">
 
       <div class="timeline-item">
@@ -262,7 +282,7 @@
 <!-- ==================== PUBLICATIONS ==================== -->
 <section class="section" id="publications">
   <div class="section-inner">
-    <div class="section-label">Selected Publications</div>
+    <h2 class="section-label">Selected Publications</h2>
     <div class="pub-list">
 
       <div class="pub-section-divider">First &amp; Co-First Author</div>
@@ -583,7 +603,7 @@
 <!-- ==================== TALKS ==================== -->
 <section class="section" id="talks">
   <div class="section-inner">
-    <div class="section-label">Invited Talks</div>
+    <h2 class="section-label">Selected Talks</h2>
     <div class="talks-list">
 
       <div class="talk-item">
@@ -616,7 +636,7 @@
 <!-- ==================== PATENTS ==================== -->
 <section class="section" id="patents">
   <div class="section-inner">
-    <div class="section-label">Patents</div>
+    <h2 class="section-label">Patents</h2>
     <div class="patents-list">
 
       <div class="patent-item">
@@ -651,7 +671,7 @@
 <!-- ==================== OPEN SOURCE ==================== -->
 <section class="section" id="oss">
   <div class="section-inner">
-    <div class="section-label">Open Source</div>
+    <h2 class="section-label">Open Source</h2>
     <div class="oss-list">
 
       <div class="pub-section-divider">Author</div>
@@ -713,7 +733,7 @@
 <!-- ==================== COURSES ==================== -->
 <section class="section" id="courses">
   <div class="section-inner">
-    <div class="section-label">Selected Coursework</div>
+    <h2 class="section-label">Selected Coursework</h2>
     <div class="courses-grid">
 
       <div>
@@ -761,7 +781,7 @@
 <!-- ==================== CONTACT ==================== -->
 <section class="section" id="contact">
   <div class="section-inner">
-    <div class="section-label">Contact</div>
+    <h2 class="section-label">Contact</h2>
     <p class="contact-blurb">Open to research conversations and opportunities — feel free to reach out.</p>
     <div class="contact-links">
       <a class="contact-link js-email" href="#">
