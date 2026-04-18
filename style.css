@@ -1039,6 +1039,11 @@ a[href*="scholar.google"] img {
   filter: brightness(0) opacity(0.75);
 }
 
+/* Resume SVG icon — tint to match other icons */
+a[href*="Resume"] img {
+  filter: brightness(0) opacity(0.75);
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
