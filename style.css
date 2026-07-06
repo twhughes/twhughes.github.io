@@ -1091,6 +1091,24 @@ footer {
     width: 100%;
   }
 
+  .writing-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .writing-thumb,
+  .writing-thumb img {
+    width: 100%;
+  }
+
+  .writing-thumb img {
+    height: 180px;
+  }
+
+  .writing-arrow {
+    display: none;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr 1fr;
   }
