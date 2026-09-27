@@ -39,6 +39,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 53px; /* sticky nav height: nav links land below it */
   font-size: 16px;
 }
 
@@ -1534,23 +1535,11 @@ footer {
   color: var(--text-muted);
 }
 
-/* ---------- Writing: text list (the cards carry the images) ---------- */
-.writing-item {
-  grid-template-columns: 1fr auto;
-}
-
-.writing-thumb {
-  display: none;
-}
-
-/* ---------- Publications: compact list ---------- */
+/* ---------- Publications: cover images, no descriptions ---------- */
 .pub-item {
-  grid-template-columns: 1fr;
-  gap: 0;
-  padding: 18px 0;
+  padding: 24px 0;
 }
 
-.pub-thumb,
 .pub-desc {
   display: none;
 }
