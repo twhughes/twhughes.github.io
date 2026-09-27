@@ -10,8 +10,8 @@
   --bg-alt:       #f3f0eb;
   --surface:      #ffffff;
   --text:         #1a1714;
-  --text-muted:   #78716c;
-  --text-light:   #a8a29e;
+  --text-muted:   #5c5753;
+  --text-light:   #706b67;
   --accent:       #c2410c;
   --accent-hover: #9a3412;
   --accent-light: #fff7ed;
@@ -175,6 +175,11 @@ nav {
   font-weight: 500;
   color: var(--text-muted);
   margin-bottom: 4px;
+}
+
+/* Keep each "·"-separated segment on one line */
+.hero-title span {
+  white-space: nowrap;
 }
 
 .hero-email {
@@ -385,7 +390,8 @@ h2.section-heading {
   white-space: nowrap;
 }
 
-@media (max-width: 640px) {
+/* Six stats in one row need ~760px; switch to a 3×2 grid below that */
+@media (max-width: 780px) {
   .stats-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -464,6 +470,7 @@ h2.section-heading {
   object-fit: contain;
   border-radius: 4px;
   margin-right: 8px;
+  margin-top: 4px;
   vertical-align: middle;
   flex-shrink: 0;
   border: 1px solid var(--border);
@@ -471,9 +478,10 @@ h2.section-heading {
   padding: 1px;
 }
 
+/* Logo + one text span; logo stays on the first line when text wraps */
 .tl-org {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-family: var(--font-head);
   font-size: 17px;
   font-weight: 700;
@@ -576,7 +584,6 @@ h2.section-heading {
   border: 1px solid var(--accent);
   padding: 2px 7px;
   border-radius: 3px;
-  opacity: 0.8;
 }
 
 .pub-section-divider {
@@ -588,6 +595,19 @@ h2.section-heading {
   padding: 24px 0 16px;
   border-top: 1px solid var(--border-dark);
   margin-top: 8px;
+}
+
+/* First divider sits under the section label's own rule: no second line */
+.pub-section-divider:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* The divider draws the line between groups, so drop the item's own */
+.pub-item:has(+ .pub-section-divider),
+.oss-item:has(+ .pub-section-divider) {
+  border-bottom: none;
 }
 
 .pub-title {
@@ -634,7 +654,6 @@ h2.section-heading {
   border-radius: 4px;
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
-  opacity: 0.85;
 }
 
 .pub-links a:hover {
@@ -1126,11 +1145,49 @@ footer {
   }
 }
 
-@media (max-width: 520px) {
-  .nav-links {
+/* Nav switches at 560px: the full link row needs ~530px */
+@media (max-width: 560px) {
+  /* The hero shows the name; give the whole bar to the links */
+  .nav-name {
     display: none;
   }
 
+  .nav-inner {
+    padding: 0;
+  }
+
+  /* One scrollable row of links; the right-edge fade hints at more */
+  .nav-links {
+    flex: 1;
+    min-width: 0;
+    align-self: stretch;
+    align-items: center;
+    gap: 20px;
+    padding: 0 1.25rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent);
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* End spacer so the last link can scroll clear of the fade */
+  .nav-links::after {
+    content: '';
+    flex: 0 0 16px;
+  }
+
+  .nav-links a {
+    flex-shrink: 0;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 520px) {
   .hero {
     padding: 48px 1.25rem 48px;
   }
@@ -1141,5 +1198,649 @@ footer {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   L2 · QUIETER — no vanity metrics, calmer labels
+   ============================================================ */
+.hero-name {
+  font-weight: 700;
+}
+
+/* Venue is metadata, not a badge */
+.pub-venue {
+  padding: 0;
+  background: none;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* One tag style: tinted, never outlined like the link buttons */
+.pub-first-author-tag,
+.talk-badge {
+  border: none;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================================
+   L3 · PITCH — the first screen states the specialty
+   ============================================================ */
+.hero--pitch {
+  padding: 72px 2rem 64px;
+}
+
+.hero--pitch .hero-inner {
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.hero--pitch .hero-photo {
+  width: 150px;
+  height: 150px;
+  margin-top: 6px;
+}
+
+.hero-lede {
+  font-family: var(--font-head);
+  font-size: clamp(1.45rem, 2.4vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin: 12px 0 12px;
+}
+
+.hero-sub {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 60ch;
+  margin-bottom: 14px;
+}
+
+.hero-sub a {
+  color: inherit;
+}
+
+.hero-meta {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.hero-meta span {
+  white-space: nowrap;
+}
+
+.hero-meta span + span::before {
+  content: "·";
+  margin: 0 0.55em;
+}
+
+/* Phones: left-aligned, so the paragraph stays readable */
+@media (max-width: 768px) {
+  .hero--pitch .hero-inner {
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .hero--pitch .hero-photo {
+    width: 96px;
+    height: 96px;
+    margin-top: 0;
+  }
+
+  .hero--pitch .hero-icons {
+    justify-content: flex-start;
+  }
+
+  /* Stack the two parts instead of breaking mid-phrase */
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hero-meta span + span::before {
+    content: none;
+  }
+}
+
+/* ============================================================
+   L4 · FULL — evidence cards, role progression, compact lists
+   ============================================================ */
+.hero--pitch {
+  padding-bottom: 48px;
+}
+
+/* ---------- Selected work: 4 evidence cards ---------- */
+.section--work {
+  padding-top: 48px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.work-card:hover {
+  border-color: var(--border-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.work-media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.work-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-media--light {
+  background: #ffffff;
+}
+
+/* Code as the picture: the API is the product */
+.work-media--code {
+  background: #1f1b18;
+  color: #efe9e1;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+.work-media--code pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.55;
+  white-space: pre;
+}
+
+.work-media--code .k { color: #f4a574; }
+.work-media--code .f { color: #ffffff; font-weight: 600; }
+.work-media--code .s { color: #b5d99c; }
+.work-media--code .c { color: #9a918a; }
+
+.work-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 14px 16px 16px;
+}
+
+.work-eyebrow {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.work-title {
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.work-text {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.work-meta {
+  margin-top: auto;
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.work-body .pub-links a {
+  padding: 2px 9px;
+}
+
+/* ---------- Experience: role progression ---------- */
+.xp {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.xp-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.xp-head .tl-logo {
+  margin-top: 0;
+}
+
+.xp-org {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.xp-dates {
+  margin-left: auto;
+  padding-left: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.xp-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 18px 0 16px;
+}
+
+.xp-steps li {
+  position: relative;
+  padding: 16px 12px 0 0;
+  border-top: 2px solid var(--border-dark);
+}
+
+.xp-steps li::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border-dark);
+}
+
+.xp-steps li.is-current {
+  border-top-color: var(--accent);
+}
+
+.xp-steps li.is-current::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.xp-step-role {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.xp-step-year {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.xp-desc {
+  max-width: 72ch;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.xp-desc a {
+  color: var(--text-muted);
+}
+
+.xp-item--earlier .xp-org {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* ---------- Writing: text list (the cards carry the images) ---------- */
+.writing-item {
+  grid-template-columns: 1fr auto;
+}
+
+.writing-thumb {
+  display: none;
+}
+
+/* ---------- Publications: compact list ---------- */
+.pub-item {
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 18px 0;
+}
+
+.pub-thumb,
+.pub-desc {
+  display: none;
+}
+
+.pub-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.pub-badges {
+  margin-bottom: 4px;
+}
+
+.pub-authors {
+  margin-bottom: 8px;
+}
+
+/* ---------- Talks & patents side by side ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 56px;
+}
+
+.split-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.split .talk-item {
+  padding: 16px 0;
+}
+
+.split .talk-item:first-child {
+  padding-top: 0;
+}
+
+.split .talk-title {
+  font-size: 16px;
+}
+
+.split .patent-item {
+  grid-template-columns: 40px 1fr;
+  padding: 11px 0;
+}
+
+.split .patent-title {
+  font-size: 14px;
+}
+
+/* ---------- Code: two columns ---------- */
+.oss-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+}
+
+.oss-list > .pub-section-divider {
+  grid-column: 1 / -1;
+}
+
+/* In a grid, per-item rules end unevenly; spacing separates items instead */
+.oss-list .oss-item {
+  border-bottom: none;
+  padding-top: 0;
+  padding-bottom: 24px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .split,
+  .oss-list {
+    grid-template-columns: 1fr;
+  }
+
+  .split {
+    gap: 40px;
+  }
+
+  .xp-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-media--code pre {
+    font-size: 12px;
+  }
+
+  /* Logo + name stay on one line (name wraps beside the logo); dates drop below */
+  .xp-head {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .xp-head .tl-logo {
+    margin-top: 3px;
+  }
+
+  .xp-org {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .xp-dates {
+    flex-basis: 100%;
+    margin-left: 0;
+    padding-left: 30px;
+  }
+
+  .xp-item--earlier .xp-dates {
+    padding-left: 0;
+  }
+}
+
+/* ============================================================
+   v4.1 · TYLER'S NOTES — CV pill, plain hero, card video
+   ============================================================ */
+
+/* CV: a labeled pill, so it reads as a résumé at a glance */
+.hero-icons a.hero-icon-label {
+  width: auto;
+  gap: 6px;
+  padding: 0 13px 0 10px;
+  border-radius: 17px;
+  text-decoration: none;
+}
+
+.hero-icons a.hero-icon-label img {
+  width: 15px;
+  height: 15px;
+}
+
+.hero-icons a.hero-icon-label span {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+/* Hero A: three labeled rows */
+.hero-rows {
+  display: grid;
+  gap: 8px;
+  max-width: 62ch;
+  margin: 2px 0 20px;
+}
+
+.hero-rows > div {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.hero-rows dt {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero-rows dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.hero-rows dd a,
+.hero-plain a {
+  color: inherit;
+}
+
+/* Hero B: a three-step path */
+.hero-path {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  margin: 8px 0 22px;
+}
+
+.hero-path li {
+  position: relative;
+  padding-top: 12px;
+  border-top: 2px solid var(--border-dark);
+}
+
+.hero-path li:last-child {
+  border-top-color: var(--accent);
+}
+
+.hero-path li:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  top: -12px;
+  right: -20px;
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+.hero-path-k {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hero-path-v {
+  display: block;
+  margin-top: 3px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Hero C: one plain paragraph */
+.hero-plain {
+  max-width: 60ch;
+  margin: 14px 0 20px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* Card video fills the media box like the images do */
+.work-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Early roles: same list, slightly smaller */
+.xp-item--minor .xp-org {
+  font-size: 16px;
+}
+
+.xp-item--minor .xp-desc {
+  font-size: 14px;
+}
+
+.xp-org a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.xp-org a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .hero-path {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hero-path li::after {
+    display: none;
+  }
+
+  .hero-plain {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-rows {
+    gap: 14px;
+  }
+
+  .hero-rows > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
 }
