@@ -1146,8 +1146,8 @@ footer {
   }
 }
 
-/* Nav switches at 560px: the full link row needs ~530px */
-@media (max-width: 560px) {
+/* Nav switches at 640px: the name and the full link row need ~575px */
+@media (max-width: 640px) {
   /* The hero shows the name; give the whole bar to the links */
   .nav-name {
     display: none;
@@ -1166,6 +1166,7 @@ footer {
     gap: 20px;
     padding: 0 1.25rem;
     overflow-x: auto;
+    scroll-padding-inline: 1.25rem 44px; /* keyboard focus scrolls a link clear of the fade */
     scrollbar-width: none;
     -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent);
     mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent);
@@ -1832,4 +1833,21 @@ footer {
     grid-template-columns: 1fr;
     gap: 2px;
   }
+}
+
+/* ============================================================
+   SIDE PROJECTS — the Code list, plus a one-line intro and app icons
+   ============================================================ */
+.section-intro {
+  margin-bottom: 24px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* App icon before the name, centered on the name's line */
+.oss-icon {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
 }
