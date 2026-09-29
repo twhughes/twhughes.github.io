@@ -1851,3 +1851,51 @@ footer {
   height: 20px;
   border-radius: 5px;
 }
+
+/* ---------- Film: click-to-play, under the four cards ---------- */
+.work-film {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: center;
+  margin: 26px 0 0;
+}
+
+.work-film video {
+  grid-column: span 2;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0e1013;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.work-film-body {
+  grid-column: span 2;
+  padding: 0 8px;
+}
+
+.work-film-body .work-title {
+  font-size: 19px;
+}
+
+.work-film-body .work-text {
+  font-size: 14.5px;
+  max-width: 50ch;
+}
+
+@media (max-width: 1000px) {
+  .work-film {
+    grid-template-columns: 1fr;
+  }
+
+  .work-film video,
+  .work-film-body {
+    grid-column: auto;
+  }
+
+  .work-film-body {
+    padding: 0 2px;
+  }
+}
